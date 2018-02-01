@@ -17,12 +17,11 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var logoImageView: UIImageView!
     
-    @IBOutlet weak var facebookLoginButton: FBSDKLoginButton!
+    @IBOutlet weak var facebookLoginButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initialUISetups()
-        facebookLoginButton.delegate = self
     }
     
     fileprivate func initialUISetups() {
@@ -32,14 +31,14 @@ class ViewController: UIViewController {
 
     @IBAction func didTapFbLoginButton(_ sender: Any) {
         let facebookLoginManager = FBSDKLoginManager()
-        facebookLoginManager.logIn(withReadPermissions: ["publicProfile"], from: self, handler: { result, error   in
+        facebookLoginManager.logIn(withReadPermissions: ["email"], from: self, handler: { result, error   in
             let loginResult: FBSDKLoginManagerLoginResult = result!
             if error != nil {
                 debugPrint(error!.localizedDescription)
             } else if loginResult.isCancelled {
                 return
             } else {
-                
+                self.fetchUserProfileData()
             }
         })
     }
@@ -53,14 +52,3 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: FBSDKLoginButtonDelegate {
-    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
-        
-    }
-    
-    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
-        
-    }
-    
-    
-}
