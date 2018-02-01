@@ -4,7 +4,7 @@ This repository contains iOS version on Blubyn App.
 ### Installation
 
 1. Clone the repo via git clone command.
-```git clone https://bitbucket.org/wheelstreet/vega.git```
+```git clone https://github.com/imjog/blubyn-ios.git```
 2. Run the following command to install all the third-party libraries.
 ```pod install```
 
