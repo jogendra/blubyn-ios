@@ -18,10 +18,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blubyn-login-screen-logo" translatesAutoresizingMaskIntoConstraints="NO" id="gVM-is-mO8">
-                                <rect key="frame" x="84" y="126" width="208" height="93"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blubyn-login-screen-logo" translatesAutoresizingMaskIntoConstraints="NO" id="gVM-is-mO8">
+                                <rect key="frame" x="84" y="126" width="207" height="93"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="93" id="40S-AY-wTR"/>
+                                    <constraint firstAttribute="width" constant="207" id="UL6-6u-zTr"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C5t-J4-Q7D">
@@ -41,7 +42,6 @@
                             <constraint firstItem="gVM-is-mO8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="106" id="9DO-IM-QP9"/>
                             <constraint firstItem="C5t-J4-Q7D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="59" id="KGq-a1-AVi"/>
                             <constraint firstItem="gVM-is-mO8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Kpn-Y1-kMC"/>
-                            <constraint firstItem="gVM-is-mO8" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="84" id="a2i-V8-Nx2"/>
                             <constraint firstItem="C5t-J4-Q7D" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="eMg-eJ-kwh"/>
                             <constraint firstItem="C5t-J4-Q7D" firstAttribute="top" secondItem="gVM-is-mO8" secondAttribute="bottom" constant="183" id="oTV-8B-73Z"/>
                         </constraints>
