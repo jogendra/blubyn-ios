@@ -27,17 +27,24 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gVM-is-mO8">
-                                <rect key="frame" x="86" y="120" width="212" height="93"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blubyn-login-screen-logo" translatesAutoresizingMaskIntoConstraints="NO" id="gVM-is-mO8">
+                                <rect key="frame" x="84" y="126" width="208" height="93"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="facebookLoginButton" destination="C5t-J4-Q7D" id="cBM-p1-DQu"/>
+                        <outlet property="logoImageView" destination="gVM-is-mO8" id="HZU-fG-uPZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="blubyn-login-screen-logo" width="425" height="186"/>
+    </resources>
 </document>
