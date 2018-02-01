@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		167FDD52C1CE1035E3174C0B /* Pods_Blubyn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0F07E52677C77E94D50102B /* Pods_Blubyn.framework */; };
 		401724B920233A81008F24BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401724B820233A81008F24BD /* AppDelegate.swift */; };
 		401724BB20233A81008F24BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401724BA20233A81008F24BD /* ViewController.swift */; };
 		401724BE20233A81008F24BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 401724BC20233A81008F24BD /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		23DF05E6E384076C5DE26A02 /* Pods-Blubyn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blubyn.release.xcconfig"; path = "Pods/Target Support Files/Pods-Blubyn/Pods-Blubyn.release.xcconfig"; sourceTree = "<group>"; };
 		401724B520233A81008F24BD /* Blubyn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blubyn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		401724B820233A81008F24BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		401724BA20233A81008F24BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		401724BF20233A81008F24BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		401724C220233A81008F24BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		401724C420233A81008F24BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0F07E52677C77E94D50102B /* Pods_Blubyn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Blubyn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F481D7FCD3FC9211A4D2EDEB /* Pods-Blubyn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blubyn.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Blubyn/Pods-Blubyn.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				167FDD52C1CE1035E3174C0B /* Pods_Blubyn.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01674B806C6B5A45E0FF1338 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A0F07E52677C77E94D50102B /* Pods_Blubyn.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		401724AC20233A80008F24BD = {
 			isa = PBXGroup;
 			children = (
 				401724B720233A81008F24BD /* Blubyn */,
 				401724B620233A81008F24BD /* Products */,
+				990C5DCE890556F839E16F67 /* Pods */,
+				01674B806C6B5A45E0FF1338 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +79,15 @@
 			path = Blubyn;
 			sourceTree = "<group>";
 		};
+		990C5DCE890556F839E16F67 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F481D7FCD3FC9211A4D2EDEB /* Pods-Blubyn.debug.xcconfig */,
+				23DF05E6E384076C5DE26A02 /* Pods-Blubyn.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 401724C720233A81008F24BD /* Build configuration list for PBXNativeTarget "Blubyn" */;
 			buildPhases = (
+				277AE62673BA3F43D132B3DF /* [CP] Check Pods Manifest.lock */,
 				401724B120233A80008F24BD /* Sources */,
 				401724B220233A80008F24BD /* Frameworks */,
 				401724B320233A80008F24BD /* Resources */,
+				2FFEB272C9CC252A43434029 /* [CP] Embed Pods Frameworks */,
+				D9CF47B00626DF3E8FBC7E9F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,72 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		277AE62673BA3F43D132B3DF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Blubyn-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2FFEB272C9CC252A43434029 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Blubyn/Pods-Blubyn-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookShare.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Blubyn/Pods-Blubyn-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D9CF47B00626DF3E8FBC7E9F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Blubyn/Pods-Blubyn-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		401724B120233A80008F24BD /* Sources */ = {
@@ -272,6 +365,7 @@
 		};
 		401724C820233A81008F24BD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F481D7FCD3FC9211A4D2EDEB /* Pods-Blubyn.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +381,7 @@
 		};
 		401724C920233A81008F24BD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23DF05E6E384076C5DE26A02 /* Pods-Blubyn.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -18,21 +18,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C5t-J4-Q7D">
-                                <rect key="frame" x="59" y="402" width="266" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blubyn-login-screen-logo" translatesAutoresizingMaskIntoConstraints="NO" id="gVM-is-mO8">
+                                <rect key="frame" x="84" y="126" width="208" height="93"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="93" id="40S-AY-wTR"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C5t-J4-Q7D">
+                                <rect key="frame" x="59" y="402" width="257" height="50"/>
                                 <color key="backgroundColor" red="0.23137254901960785" green="0.34901960784313724" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="VWX-nP-YCS"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Login with Facebook">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blubyn-login-screen-logo" translatesAutoresizingMaskIntoConstraints="NO" id="gVM-is-mO8">
-                                <rect key="frame" x="84" y="126" width="208" height="93"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gVM-is-mO8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="106" id="9DO-IM-QP9"/>
+                            <constraint firstItem="C5t-J4-Q7D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="59" id="KGq-a1-AVi"/>
+                            <constraint firstItem="gVM-is-mO8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Kpn-Y1-kMC"/>
+                            <constraint firstItem="gVM-is-mO8" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="84" id="a2i-V8-Nx2"/>
+                            <constraint firstItem="C5t-J4-Q7D" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="eMg-eJ-kwh"/>
+                            <constraint firstItem="C5t-J4-Q7D" firstAttribute="top" secondItem="gVM-is-mO8" secondAttribute="bottom" constant="183" id="oTV-8B-73Z"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>

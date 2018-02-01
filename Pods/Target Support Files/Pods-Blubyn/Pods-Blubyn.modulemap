@@ -1,0 +1,6 @@
+framework module Pods_Blubyn {
+  umbrella header "Pods-Blubyn-umbrella.h"
+
+  export *
+  module * { export * }
+}
