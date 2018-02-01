@@ -17,6 +17,7 @@
 
 /* Begin PBXFileReference section */
 		23DF05E6E384076C5DE26A02 /* Pods-Blubyn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blubyn.release.xcconfig"; path = "Pods/Target Support Files/Pods-Blubyn/Pods-Blubyn.release.xcconfig"; sourceTree = "<group>"; };
+		400120612023855E0088B283 /* Blubyn.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Blubyn.entitlements; sourceTree = "<group>"; };
 		401724B520233A81008F24BD /* Blubyn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blubyn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		401724B820233A81008F24BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		401724BA20233A81008F24BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +70,7 @@
 		401724B720233A81008F24BD /* Blubyn */ = {
 			isa = PBXGroup;
 			children = (
+				400120612023855E0088B283 /* Blubyn.entitlements */,
 				401724B820233A81008F24BD /* AppDelegate.swift */,
 				401724BA20233A81008F24BD /* ViewController.swift */,
 				401724BC20233A81008F24BD /* Main.storyboard */,
@@ -124,6 +126,11 @@
 					401724B420233A80008F24BD = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -368,6 +375,7 @@
 			baseConfigurationReference = F481D7FCD3FC9211A4D2EDEB /* Pods-Blubyn.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Blubyn/Blubyn.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7P4K4M8A4Q;
 				INFOPLIST_FILE = Blubyn/Info.plist;
@@ -384,6 +392,7 @@
 			baseConfigurationReference = 23DF05E6E384076C5DE26A02 /* Pods-Blubyn.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Blubyn/Blubyn.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7P4K4M8A4Q;
 				INFOPLIST_FILE = Blubyn/Info.plist;
