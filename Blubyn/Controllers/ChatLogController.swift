@@ -56,8 +56,8 @@ class ChatLogController: UICollectionViewController {
         inputTextField.placeholder = "Send a Message"
         textView.addSubview(inputTextField)
         inputTextField.translatesAutoresizingMaskIntoConstraints = false
-        inputTextField.leadingAnchor.constraint(equalTo: textView.leadingAnchor, constant: 2.0).isActive = true
-        inputTextField.trailingAnchor.constraint(equalTo: sendButton.leadingAnchor, constant: -2.0).isActive = true
+        inputTextField.leadingAnchor.constraint(equalTo: textView.leadingAnchor, constant: 4.0).isActive = true
+        inputTextField.trailingAnchor.constraint(equalTo: sendButton.leadingAnchor, constant: -4.0).isActive = true
         inputTextField.topAnchor.constraint(equalTo: textView.topAnchor).isActive = true
         inputTextField.bottomAnchor.constraint(equalTo: textView.safeAreaLayoutGuide.bottomAnchor).isActive = true
         
