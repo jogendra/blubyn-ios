@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3Dw-oF-HBq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YGD-Dr-Cd5">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -57,13 +57,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="994" y="-115"/>
         </scene>
-        <!--Chat Log Controller-->
+        <!--Chat-->
         <scene sceneID="2gw-bA-y3b">
             <objects>
                 <collectionViewController id="3Dw-oF-HBq" customClass="ChatLogController" customModule="Blubyn" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Mp3-nW-cg0">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="VOi-st-P0B">
@@ -87,13 +88,41 @@
                             <outlet property="delegate" destination="3Dw-oF-HBq" id="f2Z-dX-OQU"/>
                         </connections>
                     </collectionView>
+                    <navigationItem key="navigationItem" title="Chat" id="IgK-44-sQf">
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="kTx-qd-aKv"/>
+                        <barButtonItem key="rightBarButtonItem" title="Help" id="1Rw-jE-TlI"/>
+                    </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P2Y-mW-uNg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1943" y="-144"/>
+            <point key="canvasLocation" x="2721" y="-145"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cHo-xn-LD3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YGD-Dr-Cd5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="20e-zo-lwz">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.0" green="0.78823529411764703" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3Dw-oF-HBq" kind="relationship" relationship="rootViewController" id="Fnc-6N-bnA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1AJ-fp-M6e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1942.4000000000001" y="-144.82758620689657"/>
         </scene>
     </scenes>
     <resources>
         <image name="blubyn-login-screen-logo" width="425" height="186"/>
+        <image name="menu" width="20" height="14"/>
     </resources>
 </document>
