@@ -13,7 +13,7 @@ fileprivate enum DefaultValues {
     static let buttonCornerRadiusConstant: CGFloat = 4.0
 }
 
-class ViewController: UIViewController {
+class LoginViewController: UIViewController {
 
     @IBOutlet weak var logoImageView: UIImageView!
     
@@ -50,5 +50,6 @@ class ViewController: UIViewController {
             print(result.debugDescription)
         })
     }
+    
 }
 

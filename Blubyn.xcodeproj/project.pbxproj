@@ -9,10 +9,11 @@
 /* Begin PBXBuildFile section */
 		167FDD52C1CE1035E3174C0B /* Pods_Blubyn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0F07E52677C77E94D50102B /* Pods_Blubyn.framework */; };
 		401724B920233A81008F24BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401724B820233A81008F24BD /* AppDelegate.swift */; };
-		401724BB20233A81008F24BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401724BA20233A81008F24BD /* ViewController.swift */; };
+		401724BB20233A81008F24BD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401724BA20233A81008F24BD /* LoginViewController.swift */; };
 		401724BE20233A81008F24BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 401724BC20233A81008F24BD /* Main.storyboard */; };
 		401724C020233A81008F24BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 401724BF20233A81008F24BD /* Assets.xcassets */; };
 		401724C320233A81008F24BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 401724C120233A81008F24BD /* LaunchScreen.storyboard */; };
+		4039760620249409000A3AF2 /* ChatLogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4039760520249409000A3AF2 /* ChatLogController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,11 +21,12 @@
 		400120612023855E0088B283 /* Blubyn.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Blubyn.entitlements; sourceTree = "<group>"; };
 		401724B520233A81008F24BD /* Blubyn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blubyn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		401724B820233A81008F24BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		401724BA20233A81008F24BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		401724BA20233A81008F24BD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		401724BD20233A81008F24BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		401724BF20233A81008F24BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		401724C220233A81008F24BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		401724C420233A81008F24BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4039760520249409000A3AF2 /* ChatLogController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLogController.swift; sourceTree = "<group>"; };
 		A0F07E52677C77E94D50102B /* Pods_Blubyn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Blubyn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F481D7FCD3FC9211A4D2EDEB /* Pods-Blubyn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blubyn.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Blubyn/Pods-Blubyn.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,13 +74,22 @@
 			children = (
 				400120612023855E0088B283 /* Blubyn.entitlements */,
 				401724B820233A81008F24BD /* AppDelegate.swift */,
-				401724BA20233A81008F24BD /* ViewController.swift */,
+				4039760420248C58000A3AF2 /* Controllers */,
 				401724BC20233A81008F24BD /* Main.storyboard */,
-				401724BF20233A81008F24BD /* Assets.xcassets */,
 				401724C120233A81008F24BD /* LaunchScreen.storyboard */,
+				401724BF20233A81008F24BD /* Assets.xcassets */,
 				401724C420233A81008F24BD /* Info.plist */,
 			);
 			path = Blubyn;
+			sourceTree = "<group>";
+		};
+		4039760420248C58000A3AF2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				401724BA20233A81008F24BD /* LoginViewController.swift */,
+				4039760520249409000A3AF2 /* ChatLogController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		990C5DCE890556F839E16F67 /* Pods */ = {
@@ -236,7 +247,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				401724BB20233A81008F24BD /* ViewController.swift in Sources */,
+				4039760620249409000A3AF2 /* ChatLogController.swift in Sources */,
+				401724BB20233A81008F24BD /* LoginViewController.swift in Sources */,
 				401724B920233A81008F24BD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
