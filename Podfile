@@ -9,6 +9,5 @@ target 'Blubyn' do
 pod 'FacebookCore'
 pod 'FacebookLogin'
 pod 'FacebookShare'
-pod 'MessageKit'
 
 end

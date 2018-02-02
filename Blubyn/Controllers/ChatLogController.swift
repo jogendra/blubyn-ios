@@ -7,8 +7,13 @@
 //
 
 import UIKit
-import MessageKit
 
-class ChatLogController: MessagesViewController {
+class ChatLogController: UICollectionViewController {
     
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
 }
+
