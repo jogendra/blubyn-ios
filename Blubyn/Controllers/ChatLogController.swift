@@ -17,7 +17,7 @@ fileprivate enum DefaultConstants {
 
 class ChatLogController: UICollectionViewController {
     
-    var sideBar = SideBar()
+    fileprivate var sideBar = SideBar()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -92,6 +92,7 @@ class ChatLogController: UICollectionViewController {
 }
 
 extension ChatLogController: SideBarDelegate {
+    
     func SideBarDidSelectButtonAtIndex(_ index: Int) {
         
         switch index {
