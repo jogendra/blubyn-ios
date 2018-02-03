@@ -16,7 +16,9 @@ class SideBarTableViewController: UITableViewController {
 
     var delegate:SideBarTableViewControllerDelegate?
     var tableData:Array<String> = []
-
+    
+    let icons = ["microphone","microphone","microphone","microphone","microphone","microphone",]
+    
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -46,18 +48,14 @@ class SideBarTableViewController: UITableViewController {
             
             cell!.selectedBackgroundView = selectedView;
             
-            //adding left side images on cell
-//            let itemImageView = UIImageView(frame: CGRect(x: -10, y: 0, width: 20, height: 20))
-//            let itemImage = UIImage(named: "arrow-up.png")
-//            itemImageView.image = itemImage;
-//            cell?.addSubview(itemImageView);
+            
         }
         
         cell?.imageView?.bounds = CGRect(x: 0, y: 0, width: 10, height: 10);
 
         cell?.imageView?.frame = CGRect(x: 0, y: 0, width: 10, height: 10);
         cell?.imageView?.contentMode = .scaleAspectFit
-//        cell?.imageView?.image = UIImage(named: icons[indexPath.row] )
+        cell?.imageView?.image = UIImage(named: icons[indexPath.row] )
         
         
         cell!.textLabel?.text = tableData[indexPath.row]

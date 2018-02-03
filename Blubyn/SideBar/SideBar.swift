@@ -30,7 +30,7 @@ class SideBar: NSObject, SideBarTableViewControllerDelegate {
         super.init()
     }
     
-    init(sourceView:UIView, menuItems:Array<String>, menuIcon:[String]) {
+    init(sourceView:UIView, menuItems:Array<String>) {
         super.init()
         
         originView = sourceView
@@ -46,12 +46,6 @@ class SideBar: NSObject, SideBarTableViewControllerDelegate {
         let hideGestureRecognizer:UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(SideBar.handleSwipe(_:)))
         hideGestureRecognizer.direction = UISwipeGestureRecognizerDirection.left
         originView!.addGestureRecognizer(hideGestureRecognizer)
-        
-        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            var cell:UITableViewCell?  = tableView.dequeueReusableCell(withIdentifier: "cell")
-            cell?.imageView?.image = UIImage(named: menuIcon[indexPath.row])
-            return cell!;
-        }
     }
     
     func setupSideBar() {
@@ -79,7 +73,7 @@ class SideBar: NSObject, SideBarTableViewControllerDelegate {
         sideBarContainerView.addSubview(sideBarTableViewController.tableView)
     }
     
-    func handleSwipe(_ recognizer:UISwipeGestureRecognizer) {
+    @objc func handleSwipe(_ recognizer:UISwipeGestureRecognizer) {
         if recognizer.direction == UISwipeGestureRecognizerDirection.left {
             showSideBar(false)
             delegate?.SideBarWillClose?()
