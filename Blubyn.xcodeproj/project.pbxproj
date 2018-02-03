@@ -14,6 +14,8 @@
 		401724C020233A81008F24BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 401724BF20233A81008F24BD /* Assets.xcassets */; };
 		401724C320233A81008F24BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 401724C120233A81008F24BD /* LaunchScreen.storyboard */; };
 		4039760620249409000A3AF2 /* ChatLogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4039760520249409000A3AF2 /* ChatLogController.swift */; };
+		405A7AF62025B19000FE5A9F /* SideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405A7AF42025B19000FE5A9F /* SideBar.swift */; };
+		405A7AF72025B19000FE5A9F /* SideBarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405A7AF52025B19000FE5A9F /* SideBarTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		401724C220233A81008F24BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		401724C420233A81008F24BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4039760520249409000A3AF2 /* ChatLogController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLogController.swift; sourceTree = "<group>"; };
+		405A7AF42025B19000FE5A9F /* SideBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBar.swift; sourceTree = "<group>"; };
+		405A7AF52025B19000FE5A9F /* SideBarTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBarTableViewController.swift; sourceTree = "<group>"; };
 		A0F07E52677C77E94D50102B /* Pods_Blubyn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Blubyn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F481D7FCD3FC9211A4D2EDEB /* Pods-Blubyn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blubyn.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Blubyn/Pods-Blubyn.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,6 +78,7 @@
 			children = (
 				400120612023855E0088B283 /* Blubyn.entitlements */,
 				401724B820233A81008F24BD /* AppDelegate.swift */,
+				405A7AF82025B1A100FE5A9F /* SideBar */,
 				4039760420248C58000A3AF2 /* Controllers */,
 				401724BC20233A81008F24BD /* Main.storyboard */,
 				401724C120233A81008F24BD /* LaunchScreen.storyboard */,
@@ -90,6 +95,15 @@
 				4039760520249409000A3AF2 /* ChatLogController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		405A7AF82025B1A100FE5A9F /* SideBar */ = {
+			isa = PBXGroup;
+			children = (
+				405A7AF42025B19000FE5A9F /* SideBar.swift */,
+				405A7AF52025B19000FE5A9F /* SideBarTableViewController.swift */,
+			);
+			path = SideBar;
 			sourceTree = "<group>";
 		};
 		990C5DCE890556F839E16F67 /* Pods */ = {
@@ -249,7 +263,9 @@
 			files = (
 				4039760620249409000A3AF2 /* ChatLogController.swift in Sources */,
 				401724BB20233A81008F24BD /* LoginViewController.swift in Sources */,
+				405A7AF62025B19000FE5A9F /* SideBar.swift in Sources */,
 				401724B920233A81008F24BD /* AppDelegate.swift in Sources */,
+				405A7AF72025B19000FE5A9F /* SideBarTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

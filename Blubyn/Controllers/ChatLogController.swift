@@ -71,6 +71,14 @@ class ChatLogController: UICollectionViewController {
         separator.heightAnchor.constraint(equalToConstant: 1.0).isActive = true
         
     }
-
-
+    
+    @IBAction func didTapMenu(_ sender: Any) {
+        
+    }
+    
+    
+    @IBAction func didTapHelp(_ sender: Any) {
+        
+    }
+    
 }
