@@ -70,16 +70,21 @@ class SideBarTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        self.tableView.sectionHeaderHeight = 150.0
+        self.tableView.sectionHeaderHeight = 100.0
         let headerView = UIView(frame: CGRect.zero)
         let profileImageView = UIImageView(frame: CGRect(x: 75, y: 10, width: 50, height: 50))
         headerView.addSubview(profileImageView)
         profileImageView.image = UIImage(named: "microphone")
-        headerView.backgroundColor = UIColor.red
-        let userNameLabel = UILabel(frame: CGRect(x: 10, y: 70, width: headerView.frame.width, height: 30))
+        headerView.backgroundColor = UIColor(named: "appThemeColor")
+        profileImageView.layer.borderColor = UIColor.black.withAlphaComponent(0.4).cgColor
+        profileImageView.layer.borderWidth = 1.0
+        profileImageView.layer.cornerRadius = 0.5 * profileImageView.frame.width
+        profileImageView.clipsToBounds = true
+        let userNameLabel = UILabel(frame: CGRect(x: 0, y: 70, width: 200, height: 30))
         headerView.addSubview(userNameLabel)
         userNameLabel.text = "Jogendra Singh"
         userNameLabel.textColor = UIColor.white
+        userNameLabel.textAlignment = .center
         return headerView
     }
     
