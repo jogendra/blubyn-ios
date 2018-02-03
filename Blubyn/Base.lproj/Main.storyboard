@@ -224,6 +224,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" image="edit-profile"/>
+                                <connections>
+                                    <action selector="didTapEditProfile:" destination="QXI-YC-YIT" eventType="touchUpInside" id="kGv-XA-2ye"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jogendra Singh" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Oy-79-3nX">
                                 <rect key="frame" x="32" y="135" width="243" height="30"/>
@@ -262,6 +265,15 @@
                         <viewLayoutGuide key="safeArea" id="Bi0-hi-xRE"/>
                     </view>
                     <navigationItem key="navigationItem" id="aLC-9m-v1U"/>
+                    <connections>
+                        <outlet property="editProfileButton" destination="jY8-dy-DDx" id="uIm-aL-Q7L"/>
+                        <outlet property="emailTextField" destination="0Yn-hH-16i" id="s4h-Vx-Am4"/>
+                        <outlet property="firstNameTextField" destination="Kyd-x8-ODD" id="N7h-Ck-NVK"/>
+                        <outlet property="lastNameTextField" destination="IYS-qL-fMd" id="176-1J-v2F"/>
+                        <outlet property="phoneNumberTextField" destination="REM-PU-YKg" id="ZeO-1R-ckm"/>
+                        <outlet property="profileImageView" destination="zgl-k7-KCG" id="VZJ-UG-7h3"/>
+                        <outlet property="userNameLabel" destination="0Oy-79-3nX" id="Ep0-85-Tqn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="66n-YU-0Ur" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
