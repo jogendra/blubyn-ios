@@ -116,40 +116,124 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zgl-k7-KCG">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="zgl-k7-KCG">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="175"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="175" id="Qqz-FP-1EO"/>
+                                </constraints>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Jogendra" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KbG-lJ-6bV" customClass="HoshiTextField">
-                                <rect key="frame" x="32" y="233" width="200" height="65"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Jogendra" placeholder="First Name" textAlignment="natural" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="Kyd-x8-ODD" customClass="JSTextField" customModule="Blubyn" customModuleProvider="target">
+                                <rect key="frame" x="32" y="207" width="311" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="n8M-AU-9Xn"/>
+                                </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
+                                        <color key="value" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Singh" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Drc-LQ-E1Y">
-                                <rect key="frame" x="32" y="303" width="200" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Singh" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IYS-qL-fMd" customClass="JSTextField" customModule="Blubyn" customModuleProvider="target">
+                                <rect key="frame" x="32" y="304" width="311" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="ZPM-UI-DHH"/>
+                                </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
+                                        <color key="value" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="+91 9695806384" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7OK-8E-sUE">
-                                <rect key="frame" x="32" y="383" width="200" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="jogendra.kumar.phy15@iitbhu.ac.in" placeholder="Email" textAlignment="natural" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="0Yn-hH-16i" customClass="JSTextField" customModule="Blubyn" customModuleProvider="target">
+                                <rect key="frame" x="32" y="498" width="311" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="2zJ-Tm-nos"/>
+                                </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
+                                        <color key="value" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="imjog24@gmail.com" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2hM-OG-g6G">
-                                <rect key="frame" x="32" y="475" width="200" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="9695806384" placeholder="Phone Number" textAlignment="natural" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="REM-PU-YKg" customClass="JSTextField" customModule="Blubyn" customModuleProvider="target">
+                                <rect key="frame" x="32" y="401" width="311" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="VH5-bp-d8r"/>
+                                </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
+                                        <color key="value" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Kyd-x8-ODD" firstAttribute="leading" secondItem="Bi0-hi-xRE" secondAttribute="leading" constant="32" id="5Hu-PO-qya"/>
+                            <constraint firstItem="0Yn-hH-16i" firstAttribute="top" secondItem="REM-PU-YKg" secondAttribute="bottom" constant="32" id="6YM-6z-fWg"/>
+                            <constraint firstItem="zgl-k7-KCG" firstAttribute="centerX" secondItem="Bi0-hi-xRE" secondAttribute="centerX" id="LBV-1h-7ab"/>
+                            <constraint firstItem="REM-PU-YKg" firstAttribute="top" secondItem="IYS-qL-fMd" secondAttribute="bottom" constant="32" id="LVL-WM-qfc"/>
+                            <constraint firstItem="Bi0-hi-xRE" firstAttribute="trailing" secondItem="zgl-k7-KCG" secondAttribute="trailing" id="N5r-6J-mYH"/>
+                            <constraint firstItem="Kyd-x8-ODD" firstAttribute="top" secondItem="zgl-k7-KCG" secondAttribute="bottom" constant="32" id="PwU-01-NUU"/>
+                            <constraint firstItem="Bi0-hi-xRE" firstAttribute="trailing" secondItem="0Yn-hH-16i" secondAttribute="trailing" constant="32" id="TII-u5-bPQ"/>
+                            <constraint firstItem="Bi0-hi-xRE" firstAttribute="trailing" secondItem="Kyd-x8-ODD" secondAttribute="trailing" constant="32" id="VbI-T6-xhP"/>
+                            <constraint firstItem="Bi0-hi-xRE" firstAttribute="trailing" secondItem="IYS-qL-fMd" secondAttribute="trailing" constant="32" id="WdL-cK-fmy"/>
+                            <constraint firstItem="REM-PU-YKg" firstAttribute="leading" secondItem="Bi0-hi-xRE" secondAttribute="leading" constant="32" id="fK9-E1-3vE"/>
+                            <constraint firstItem="IYS-qL-fMd" firstAttribute="leading" secondItem="Bi0-hi-xRE" secondAttribute="leading" constant="32" id="h3I-T7-NGR"/>
+                            <constraint firstItem="Bi0-hi-xRE" firstAttribute="trailing" secondItem="REM-PU-YKg" secondAttribute="trailing" constant="32" id="pRL-NB-G0j"/>
+                            <constraint firstItem="IYS-qL-fMd" firstAttribute="top" secondItem="Kyd-x8-ODD" secondAttribute="bottom" constant="32" id="pvF-Qg-32I"/>
+                            <constraint firstItem="0Yn-hH-16i" firstAttribute="leading" secondItem="Bi0-hi-xRE" secondAttribute="leading" constant="32" id="rwy-UK-j0Y"/>
+                            <constraint firstItem="zgl-k7-KCG" firstAttribute="top" secondItem="Bi0-hi-xRE" secondAttribute="top" id="uMY-x6-drC"/>
+                            <constraint firstItem="zgl-k7-KCG" firstAttribute="leading" secondItem="Bi0-hi-xRE" secondAttribute="leading" id="vpG-l6-zJY"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Bi0-hi-xRE"/>
                     </view>
                     <navigationItem key="navigationItem" id="aLC-9m-v1U"/>
@@ -185,5 +269,6 @@
     <resources>
         <image name="blubyn-login-screen-logo" width="425" height="186"/>
         <image name="menu" width="20" height="14"/>
+        <image name="profile-placeholder" width="768" height="381"/>
     </resources>
 </document>

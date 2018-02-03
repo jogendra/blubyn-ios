@@ -11,7 +11,7 @@ import UIKit
 /**
  An HoshiTextField is a subclass of the TextFieldEffects object, is a control that displays an UITextField with a customizable visual effect around the lower edge of the control.
  */
-@IBDesignable open class HoshiTextField: TextFieldEffects {
+@IBDesignable open class JSTextField: TextFieldEffects {
     /**
      The color of the border when it has no content.
      

@@ -19,6 +19,8 @@
 		4095E3CE2025E0F10088A80F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4095E3CC2025E0F10088A80F /* ProfileViewController.swift */; };
 		4095E3D32025E2770088A80F /* Utilities in Resources */ = {isa = PBXBuildFile; fileRef = 4095E3D22025E2770088A80F /* Utilities */; };
 		4095E3D52025E2900088A80F /* Services in Resources */ = {isa = PBXBuildFile; fileRef = 4095E3D42025E2900088A80F /* Services */; };
+		40ADAB672025F9E7000DD816 /* JSTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ADAB662025F9E7000DD816 /* JSTextField.swift */; };
+		40ADAB692025FC7F000DD816 /* TextFieldEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ADAB682025FC7E000DD816 /* TextFieldEffects.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		4095E3CC2025E0F10088A80F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		4095E3D22025E2770088A80F /* Utilities */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Utilities; sourceTree = "<group>"; };
 		4095E3D42025E2900088A80F /* Services */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Services; sourceTree = "<group>"; };
+		40ADAB662025F9E7000DD816 /* JSTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSTextField.swift; sourceTree = "<group>"; };
+		40ADAB682025FC7E000DD816 /* TextFieldEffects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldEffects.swift; sourceTree = "<group>"; };
 		A0F07E52677C77E94D50102B /* Pods_Blubyn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Blubyn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F481D7FCD3FC9211A4D2EDEB /* Pods-Blubyn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blubyn.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Blubyn/Pods-Blubyn.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -84,6 +88,8 @@
 			children = (
 				400120612023855E0088B283 /* Blubyn.entitlements */,
 				401724B820233A81008F24BD /* AppDelegate.swift */,
+				40ADAB662025F9E7000DD816 /* JSTextField.swift */,
+				40ADAB682025FC7E000DD816 /* TextFieldEffects.swift */,
 				405A7AF82025B1A100FE5A9F /* SideBar */,
 				4039760420248C58000A3AF2 /* Controllers */,
 				401724BC20233A81008F24BD /* Main.storyboard */,
@@ -288,7 +294,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40ADAB672025F9E7000DD816 /* JSTextField.swift in Sources */,
 				4095E3CE2025E0F10088A80F /* ProfileViewController.swift in Sources */,
+				40ADAB692025FC7F000DD816 /* TextFieldEffects.swift in Sources */,
 				4095E3CB2025BC760088A80F /* SideBar.swift in Sources */,
 				4095E3CA2025BC760088A80F /* SideBarTableViewController.swift in Sources */,
 				4039760620249409000A3AF2 /* ChatLogController.swift in Sources */,
