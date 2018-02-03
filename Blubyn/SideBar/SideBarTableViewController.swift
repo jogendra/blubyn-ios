@@ -17,7 +17,7 @@ class SideBarTableViewController: UITableViewController {
     var delegate:SideBarTableViewControllerDelegate?
     var tableData:Array<String> = []
     
-    let icons = ["microphone","microphone","microphone","microphone","microphone","microphone",]
+    let icons = ["chat-icon","deals-icon","mytrip-icon","eye-icon","settings-icon","profile-icon",]
     
     // MARK: - Table view data source
     
@@ -62,7 +62,7 @@ class SideBarTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 45.0
+        return 50.0
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -74,7 +74,7 @@ class SideBarTableViewController: UITableViewController {
         let headerView = UIView(frame: CGRect.zero)
         let profileImageView = UIImageView(frame: CGRect(x: 75, y: 10, width: 50, height: 50))
         headerView.addSubview(profileImageView)
-        profileImageView.image = UIImage(named: "microphone")
+        profileImageView.image = UIImage(named: "profile-icon")
         headerView.backgroundColor = UIColor(named: "appThemeColor")
         profileImageView.layer.borderColor = UIColor.black.withAlphaComponent(0.4).cgColor
         profileImageView.layer.borderWidth = 1.0
