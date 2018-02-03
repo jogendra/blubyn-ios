@@ -16,10 +16,13 @@ fileprivate enum DefaultConstants {
 
 
 class ChatLogController: UICollectionViewController {
+    
+    var sideBar = SideBar()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupInputComponents()
+        sideBarSetup()
     }
 
     fileprivate func setupInputComponents() {
@@ -72,12 +75,24 @@ class ChatLogController: UICollectionViewController {
         
     }
     
+    fileprivate func sideBarSetup() {
+        sideBar = SideBar(sourceView: self.view, menuItems: ["Profile", "About Us"], menuIcon: ["send-icon", "microphone"])
+        sideBar.delegate = self
+    }
+    
     @IBAction func didTapMenu(_ sender: Any) {
-        
+        sideBar.showSideBar(!sideBar.isSideBarOpen)
     }
     
     
     @IBAction func didTapHelp(_ sender: Any) {
+        
+    }
+    
+}
+
+extension ChatLogController: SideBarDelegate {
+    func SideBarDidSelectButtonAtIndex(_ index: Int) {
         
     }
     
