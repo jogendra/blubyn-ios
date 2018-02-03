@@ -94,6 +94,22 @@ class ChatLogController: UICollectionViewController {
 extension ChatLogController: SideBarDelegate {
     func SideBarDidSelectButtonAtIndex(_ index: Int) {
         
+        switch index {
+        case 0:
+            sideBar.showSideBar(!sideBar.isSideBarOpen)
+        case 1:
+            sideBar.showSideBar(!sideBar.isSideBarOpen)
+        case 2:
+            sideBar.showSideBar(!sideBar.isSideBarOpen)
+        case 3:
+            sideBar.showSideBar(!sideBar.isSideBarOpen)
+        case 4:
+            sideBar.showSideBar(!sideBar.isSideBarOpen)
+        case 5:
+            sideBar.showSideBar(!sideBar.isSideBarOpen)
+        default:
+            break
+        }
     }
     
 }

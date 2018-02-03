@@ -38,15 +38,13 @@ class SideBarTableViewController: UITableViewController {
             // Configure the cell...
             cell!.backgroundColor = UIColor.clear;
             cell!.textLabel?.textColor = UIColor.init(red: 100/255, green: 100/255, blue: 100/255, alpha: 1.0);
-            cell?.layer.borderWidth = 0.25
-            cell?.layer.borderColor = UIColor.gray.cgColor
             
-            let selectedView:UIView = UIView(frame: CGRect(x: 0, y: 0, width: cell!.frame.size.width, height: cell!.frame.size.height))
-            selectedView.backgroundColor = UIColor.black.withAlphaComponent(1.0)
-            
-            cell?.textLabel?.highlightedTextColor = UIColor.white
-            
-            cell!.selectedBackgroundView = selectedView;
+//            let selectedView:UIView = UIView(frame: CGRect(x: 0, y: 0, width: cell!.frame.size.width, height: cell!.frame.size.height))
+//            selectedView.backgroundColor = UIColor.black.withAlphaComponent(1.0)
+//            
+//            cell?.textLabel?.highlightedTextColor = UIColor.white
+//            
+//            cell!.selectedBackgroundView = selectedView
             
             
         }
@@ -69,6 +67,20 @@ class SideBarTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         delegate?.SideBarControlDidSelectRow(indexPath)
+    }
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        self.tableView.sectionHeaderHeight = 150.0
+        let headerView = UIView(frame: CGRect.zero)
+        let profileImageView = UIImageView(frame: CGRect(x: 75, y: 10, width: 50, height: 50))
+        headerView.addSubview(profileImageView)
+        profileImageView.image = UIImage(named: "microphone")
+        headerView.backgroundColor = UIColor.red
+        let userNameLabel = UILabel(frame: CGRect(x: 10, y: 70, width: headerView.frame.width, height: 30))
+        headerView.addSubview(userNameLabel)
+        userNameLabel.text = "Jogendra Singh"
+        userNameLabel.textColor = UIColor.white
+        return headerView
     }
     
 }
