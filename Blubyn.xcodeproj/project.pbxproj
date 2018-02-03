@@ -18,6 +18,8 @@
 		4095E3CB2025BC760088A80F /* SideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4095E3C92025BC760088A80F /* SideBar.swift */; };
 		4095E3CE2025E0F10088A80F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4095E3CC2025E0F10088A80F /* ProfileViewController.swift */; };
 		4095E3CF2025E0F10088A80F /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4095E3CD2025E0F10088A80F /* ProfileViewController.xib */; };
+		4095E3D32025E2770088A80F /* Utilities in Resources */ = {isa = PBXBuildFile; fileRef = 4095E3D22025E2770088A80F /* Utilities */; };
+		4095E3D52025E2900088A80F /* Services in Resources */ = {isa = PBXBuildFile; fileRef = 4095E3D42025E2900088A80F /* Services */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		4095E3C92025BC760088A80F /* SideBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBar.swift; sourceTree = "<group>"; };
 		4095E3CC2025E0F10088A80F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		4095E3CD2025E0F10088A80F /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		4095E3D22025E2770088A80F /* Utilities */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Utilities; sourceTree = "<group>"; };
+		4095E3D42025E2900088A80F /* Services */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Services; sourceTree = "<group>"; };
 		A0F07E52677C77E94D50102B /* Pods_Blubyn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Blubyn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F481D7FCD3FC9211A4D2EDEB /* Pods-Blubyn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blubyn.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Blubyn/Pods-Blubyn.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,8 +90,9 @@
 				4039760420248C58000A3AF2 /* Controllers */,
 				401724BC20233A81008F24BD /* Main.storyboard */,
 				401724C120233A81008F24BD /* LaunchScreen.storyboard */,
-				401724BF20233A81008F24BD /* Assets.xcassets */,
-				401724C420233A81008F24BD /* Info.plist */,
+				4095E3D42025E2900088A80F /* Services */,
+				4095E3D22025E2770088A80F /* Utilities */,
+				4095E3D12025E2190088A80F /* Resources */,
 			);
 			path = Blubyn;
 			sourceTree = "<group>";
@@ -118,6 +123,15 @@
 				4095E3CD2025E0F10088A80F /* ProfileViewController.xib */,
 			);
 			path = ProfileViewController;
+			sourceTree = "<group>";
+		};
+		4095E3D12025E2190088A80F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				401724BF20233A81008F24BD /* Assets.xcassets */,
+				401724C420233A81008F24BD /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		990C5DCE890556F839E16F67 /* Pods */ = {
@@ -196,9 +210,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4095E3D52025E2900088A80F /* Services in Resources */,
 				401724C320233A81008F24BD /* LaunchScreen.storyboard in Resources */,
 				401724C020233A81008F24BD /* Assets.xcassets in Resources */,
 				4095E3CF2025E0F10088A80F /* ProfileViewController.xib in Resources */,
+				4095E3D32025E2770088A80F /* Utilities in Resources */,
 				401724BE20233A81008F24BD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
