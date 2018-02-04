@@ -123,7 +123,7 @@ extension ChatLogController: SideBarDelegate {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        inputTextField.endEditing(true)
+        inputTextField.resignFirstResponder()
     }
     
 }
