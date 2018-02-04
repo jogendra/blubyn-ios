@@ -27,6 +27,8 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
     }()
     
     let cellId = "cellId"
+    
+    let messages: [String] = ["Hey there!", "My name is jogendra and i am studyng at indian institute of technology banaras hindu university varanasi", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries", "t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,11 +36,13 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
         setupInputComponents()
         sideBarSetup()
         
-        collectionView?.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellId)
+        collectionView?.contentInset = UIEdgeInsets(top: 8.0, left: 0, bottom: 52.0, right: 0)
+        collectionView?.register(ChatMessagesCell.self, forCellWithReuseIdentifier: cellId)
     }
 
     fileprivate func setupInputComponents() {
         let textView = UIView()
+        textView.backgroundColor = UIColor.white
         view.addSubview(textView)
         textView.translatesAutoresizingMaskIntoConstraints = false
         textView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
@@ -87,21 +91,42 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
     // MARK: - Collection View Methods
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return messages.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
-        cell.backgroundColor = UIColor.red
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! ChatMessagesCell
+        let message = messages[indexPath.item]
+        cell.chatTextView.text = message
+        
+        //Modify the width accordingly
+        cell.bubbleWidthAnchor?.constant = estimateFrameForText(text: message).width + 32.0
+        
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: 80)
+        
+        var cellHeight: CGFloat = 80.0
+        let text = messages[indexPath.item]
+        cellHeight = estimateFrameForText(text: text).height + 20.0
+        
+        return CGSize(width: collectionView.frame.width, height: cellHeight)
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        inputTextField.resignFirstResponder()
+    }
+    
+    private func estimateFrameForText(text: String) -> CGRect {
+        let size = CGSize(width: 200.0, height: 1000)
+        let options = NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin)
+        return NSString(string: text).boundingRect(with: size, options: options, attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 17.0)], context: nil)
     }
     
     fileprivate func sideBarSetup() {
+        
         sideBar = SideBar(sourceView: self.view, menuItems: ["Chat", "Hot Deals", "My Trips", "Experiences", "Settings", "Profile"])
         sideBar.delegate = self
     }
@@ -145,6 +170,7 @@ extension ChatLogController: SideBarDelegate {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         inputTextField.resignFirstResponder()
+        inputTextField.endEditing(true)
     }
     
 }
