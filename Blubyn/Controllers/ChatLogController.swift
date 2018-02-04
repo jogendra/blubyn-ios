@@ -105,9 +105,13 @@ extension ChatLogController: SideBarDelegate {
         case 3:
             sideBar.showSideBar(!sideBar.isSideBarOpen)
         case 4:
-            sideBar.showSideBar(!sideBar.isSideBarOpen)
+            let settingStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let settingsViewController = settingStoryboard.instantiateViewController(withIdentifier: "settingvc")
+            self.navigationController?.pushViewController(settingsViewController, animated: true)
         case 5:
-            sideBar.showSideBar(!sideBar.isSideBarOpen)
+            let profileStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let profileViewController = profileStoryboard.instantiateViewController(withIdentifier: "profilevc")
+            self.navigationController?.pushViewController(profileViewController, animated: true)
         default:
             break
         }
