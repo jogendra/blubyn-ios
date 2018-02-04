@@ -17,11 +17,19 @@
 		4095E3CA2025BC760088A80F /* SideBarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4095E3C82025BC750088A80F /* SideBarTableViewController.swift */; };
 		4095E3CB2025BC760088A80F /* SideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4095E3C92025BC760088A80F /* SideBar.swift */; };
 		4095E3CE2025E0F10088A80F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4095E3CC2025E0F10088A80F /* ProfileViewController.swift */; };
-		4095E3D32025E2770088A80F /* Utilities in Resources */ = {isa = PBXBuildFile; fileRef = 4095E3D22025E2770088A80F /* Utilities */; };
-		4095E3D52025E2900088A80F /* Services in Resources */ = {isa = PBXBuildFile; fileRef = 4095E3D42025E2900088A80F /* Services */; };
 		40ADAB672025F9E7000DD816 /* JSTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ADAB662025F9E7000DD816 /* JSTextField.swift */; };
 		40ADAB692025FC7F000DD816 /* TextFieldEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ADAB682025FC7E000DD816 /* TextFieldEffects.swift */; };
 		40ADAB6B2026C553000DD816 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ADAB6A2026C553000DD816 /* SettingsTableViewController.swift */; };
+		40ADAB72202785AA000DD816 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ADAB6C202785A8000DD816 /* ActivityIndicator.swift */; };
+		40ADAB73202785AA000DD816 /* PulseAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ADAB6D202785A9000DD816 /* PulseAnimation.swift */; };
+		40ADAB74202785AA000DD816 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ADAB6E202785A9000DD816 /* Utils.swift */; };
+		40ADAB75202785AA000DD816 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ADAB6F202785AA000DD816 /* Toast.swift */; };
+		40ADAB76202785AA000DD816 /* DeviceSizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ADAB70202785AA000DD816 /* DeviceSizes.swift */; };
+		40ADAB77202785AA000DD816 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ADAB71202785AA000DD816 /* Extensions.swift */; };
+		40ADAB832027861D000DD816 /* UIView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ADAB7C2027861C000DD816 /* UIView+Reusable.swift */; };
+		40ADAB842027861D000DD816 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ADAB7D2027861D000DD816 /* SwiftyJSON.swift */; };
+		40ADAB852027861D000DD816 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ADAB7E2027861D000DD816 /* Location.swift */; };
+		40ADAB862027861D000DD816 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ADAB7F2027861D000DD816 /* Reachability.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,11 +46,19 @@
 		4095E3C82025BC750088A80F /* SideBarTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBarTableViewController.swift; sourceTree = "<group>"; };
 		4095E3C92025BC760088A80F /* SideBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBar.swift; sourceTree = "<group>"; };
 		4095E3CC2025E0F10088A80F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		4095E3D22025E2770088A80F /* Utilities */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Utilities; sourceTree = "<group>"; };
-		4095E3D42025E2900088A80F /* Services */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Services; sourceTree = "<group>"; };
 		40ADAB662025F9E7000DD816 /* JSTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSTextField.swift; sourceTree = "<group>"; };
 		40ADAB682025FC7E000DD816 /* TextFieldEffects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldEffects.swift; sourceTree = "<group>"; };
 		40ADAB6A2026C553000DD816 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		40ADAB6C202785A8000DD816 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		40ADAB6D202785A9000DD816 /* PulseAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulseAnimation.swift; sourceTree = "<group>"; };
+		40ADAB6E202785A9000DD816 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		40ADAB6F202785AA000DD816 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		40ADAB70202785AA000DD816 /* DeviceSizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceSizes.swift; sourceTree = "<group>"; };
+		40ADAB71202785AA000DD816 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		40ADAB7C2027861C000DD816 /* UIView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Reusable.swift"; sourceTree = "<group>"; };
+		40ADAB7D2027861D000DD816 /* SwiftyJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		40ADAB7E2027861D000DD816 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		40ADAB7F2027861D000DD816 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		A0F07E52677C77E94D50102B /* Pods_Blubyn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Blubyn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F481D7FCD3FC9211A4D2EDEB /* Pods-Blubyn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blubyn.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Blubyn/Pods-Blubyn.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,17 +104,13 @@
 		401724B720233A81008F24BD /* Blubyn */ = {
 			isa = PBXGroup;
 			children = (
-				400120612023855E0088B283 /* Blubyn.entitlements */,
 				401724B820233A81008F24BD /* AppDelegate.swift */,
-				40ADAB662025F9E7000DD816 /* JSTextField.swift */,
-				40ADAB682025FC7E000DD816 /* TextFieldEffects.swift */,
 				405A7AF82025B1A100FE5A9F /* SideBar */,
 				4039760420248C58000A3AF2 /* Controllers */,
 				401724BC20233A81008F24BD /* Main.storyboard */,
-				401724C120233A81008F24BD /* LaunchScreen.storyboard */,
-				401724C420233A81008F24BD /* Info.plist */,
-				4095E3D42025E2900088A80F /* Services */,
-				4095E3D22025E2770088A80F /* Utilities */,
+				40ADAB88202786D7000DD816 /* Supporting Files */,
+				40ADAB872027862C000DD816 /* Services */,
+				40ADAB78202785BA000DD816 /* Utilities */,
 				4095E3D12025E2190088A80F /* Resources */,
 			);
 			path = Blubyn;
@@ -109,7 +121,7 @@
 			children = (
 				401724BA20233A81008F24BD /* LoginViewController.swift */,
 				4039760520249409000A3AF2 /* ChatLogController.swift */,
-				4095E3D02025E0FA0088A80F /* ProfileViewController */,
+				4095E3CC2025E0F10088A80F /* ProfileViewController.swift */,
 				40ADAB6A2026C553000DD816 /* SettingsTableViewController.swift */,
 			);
 			path = Controllers;
@@ -124,20 +136,49 @@
 			path = SideBar;
 			sourceTree = "<group>";
 		};
-		4095E3D02025E0FA0088A80F /* ProfileViewController */ = {
-			isa = PBXGroup;
-			children = (
-				4095E3CC2025E0F10088A80F /* ProfileViewController.swift */,
-			);
-			path = ProfileViewController;
-			sourceTree = "<group>";
-		};
 		4095E3D12025E2190088A80F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				401724BF20233A81008F24BD /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		40ADAB78202785BA000DD816 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				40ADAB662025F9E7000DD816 /* JSTextField.swift */,
+				40ADAB682025FC7E000DD816 /* TextFieldEffects.swift */,
+				40ADAB6C202785A8000DD816 /* ActivityIndicator.swift */,
+				40ADAB70202785AA000DD816 /* DeviceSizes.swift */,
+				40ADAB71202785AA000DD816 /* Extensions.swift */,
+				40ADAB6D202785A9000DD816 /* PulseAnimation.swift */,
+				40ADAB6F202785AA000DD816 /* Toast.swift */,
+				40ADAB6E202785A9000DD816 /* Utils.swift */,
+			);
+			name = Utilities;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		40ADAB872027862C000DD816 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				40ADAB7E2027861D000DD816 /* Location.swift */,
+				40ADAB7F2027861D000DD816 /* Reachability.swift */,
+				40ADAB7D2027861D000DD816 /* SwiftyJSON.swift */,
+				40ADAB7C2027861C000DD816 /* UIView+Reusable.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		40ADAB88202786D7000DD816 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				400120612023855E0088B283 /* Blubyn.entitlements */,
+				401724C120233A81008F24BD /* LaunchScreen.storyboard */,
+				401724C420233A81008F24BD /* Info.plist */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		990C5DCE890556F839E16F67 /* Pods */ = {
@@ -216,10 +257,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4095E3D52025E2900088A80F /* Services in Resources */,
 				401724C320233A81008F24BD /* LaunchScreen.storyboard in Resources */,
 				401724C020233A81008F24BD /* Assets.xcassets in Resources */,
-				4095E3D32025E2770088A80F /* Utilities in Resources */,
 				401724BE20233A81008F24BD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,6 +291,8 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Blubyn/Pods-Blubyn-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
@@ -262,6 +303,8 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
@@ -297,15 +340,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40ADAB75202785AA000DD816 /* Toast.swift in Sources */,
 				40ADAB672025F9E7000DD816 /* JSTextField.swift in Sources */,
+				40ADAB842027861D000DD816 /* SwiftyJSON.swift in Sources */,
 				4095E3CE2025E0F10088A80F /* ProfileViewController.swift in Sources */,
 				40ADAB692025FC7F000DD816 /* TextFieldEffects.swift in Sources */,
 				4095E3CB2025BC760088A80F /* SideBar.swift in Sources */,
+				40ADAB73202785AA000DD816 /* PulseAnimation.swift in Sources */,
 				4095E3CA2025BC760088A80F /* SideBarTableViewController.swift in Sources */,
 				4039760620249409000A3AF2 /* ChatLogController.swift in Sources */,
+				40ADAB76202785AA000DD816 /* DeviceSizes.swift in Sources */,
+				40ADAB72202785AA000DD816 /* ActivityIndicator.swift in Sources */,
+				40ADAB852027861D000DD816 /* Location.swift in Sources */,
+				40ADAB77202785AA000DD816 /* Extensions.swift in Sources */,
+				40ADAB832027861D000DD816 /* UIView+Reusable.swift in Sources */,
 				401724BB20233A81008F24BD /* LoginViewController.swift in Sources */,
 				401724B920233A81008F24BD /* AppDelegate.swift in Sources */,
+				40ADAB862027861D000DD816 /* Reachability.swift in Sources */,
 				40ADAB6B2026C553000DD816 /* SettingsTableViewController.swift in Sources */,
+				40ADAB74202785AA000DD816 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,10 +496,10 @@
 			baseConfigurationReference = F481D7FCD3FC9211A4D2EDEB /* Pods-Blubyn.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Blubyn/Blubyn.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7P4K4M8A4Q;
-				INFOPLIST_FILE = Blubyn/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Blubyn/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jog.Blubyn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -460,10 +513,10 @@
 			baseConfigurationReference = 23DF05E6E384076C5DE26A02 /* Pods-Blubyn.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Blubyn/Blubyn.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7P4K4M8A4Q;
-				INFOPLIST_FILE = Blubyn/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Blubyn/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jog.Blubyn;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -15,7 +15,7 @@ fileprivate enum DefaultConstants {
 }
 
 
-class ChatLogController: UICollectionViewController {
+class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     fileprivate var sideBar = SideBar()
     
@@ -26,11 +26,15 @@ class ChatLogController: UICollectionViewController {
         return textField
     }()
     
+    let cellId = "cellId"
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setupInputComponents()
         sideBarSetup()
+        
+        collectionView?.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellId)
     }
 
     fileprivate func setupInputComponents() {
@@ -78,6 +82,23 @@ class ChatLogController: UICollectionViewController {
         separator.topAnchor.constraint(equalTo: textView.topAnchor).isActive = true
         separator.heightAnchor.constraint(equalToConstant: 1.0).isActive = true
         
+    }
+    
+    // MARK: - Collection View Methods
+    
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
+        cell.backgroundColor = UIColor.red
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.width, height: 80)
     }
     
     fileprivate func sideBarSetup() {

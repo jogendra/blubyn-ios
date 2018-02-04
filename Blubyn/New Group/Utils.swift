@@ -39,7 +39,7 @@ class Utils {
         myActivityIndicator.removeFromSuperview()
     }
     
-  func addEffectsInTextField(_ textField: HoshiTextField, placeholder:String, borderActiveColor: UIColor = UIColor.appThemeColor, borderInactiveColor: UIColor = UIColor.appThemeColor, fontSize: CGFloat = 17) {
+  func addEffectsInTextField(_ textField: JSTextField, placeholder:String, borderActiveColor: UIColor = UIColor.appThemeColor, borderInactiveColor: UIColor = UIColor.appThemeColor, fontSize: CGFloat = 17) {
         textField.placeholderColor = borderInactiveColor//UIColor.white
         textField.placeholder = placeholder
         textField.borderActiveColor = borderActiveColor//UIColor.loginSignUpTextFieldHighlightColor
@@ -56,7 +56,7 @@ class Utils {
         }
     
     
-    func makeAnimatedTextFieldFillTheContainerView(_ textField: HoshiTextField, containerView: UIView) {
+    func makeAnimatedTextFieldFillTheContainerView(_ textField: JSTextField, containerView: UIView) {
         textField.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint(item: textField, attribute: NSLayoutAttribute.leading, relatedBy: NSLayoutRelation.equal, toItem: containerView, attribute: NSLayoutAttribute.leading, multiplier: 1, constant: 0).isActive = true
         NSLayoutConstraint(item: textField, attribute: NSLayoutAttribute.trailing, relatedBy: NSLayoutRelation.equal, toItem: containerView, attribute: NSLayoutAttribute.trailing, multiplier: 1, constant: 0).isActive = true
@@ -64,7 +64,7 @@ class Utils {
         NSLayoutConstraint(item: textField, attribute: NSLayoutAttribute.bottom, relatedBy: NSLayoutRelation.equal, toItem: containerView, attribute: NSLayoutAttribute.bottom, multiplier: 1, constant: 0).isActive = true
     }
     
-    func showErrorOnAnimatedTextField(_ textField: HoshiTextField, errorMessageLabel: UILabel ,errorMessage: String, errorExists: inout Bool) {
+    func showErrorOnAnimatedTextField(_ textField: JSTextField, errorMessageLabel: UILabel ,errorMessage: String, errorExists: inout Bool) {
         textField.borderInactiveColor = UIColor.iosRed
         errorMessageLabel.text = errorMessage
         errorExists = true
