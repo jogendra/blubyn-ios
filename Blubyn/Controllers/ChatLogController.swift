@@ -18,6 +18,14 @@ fileprivate enum DefaultConstants {
 class ChatLogController: UICollectionViewController {
     
     fileprivate var sideBar = SideBar()
+    
+    lazy var inputTextField: UITextField = {
+        let textField = UITextField()
+        textField.placeholder = "Send a Message..."
+        textField.delegate = self
+        return textField
+    }()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,9 +62,6 @@ class ChatLogController: UICollectionViewController {
         sendButton.bottomAnchor.constraint(equalTo: textView.bottomAnchor).isActive = true
         sendButton.widthAnchor.constraint(equalToConstant: 44.0).isActive = true
         
-        
-        let inputTextField = UITextField()
-        inputTextField.placeholder = "Send a Message"
         textView.addSubview(inputTextField)
         inputTextField.translatesAutoresizingMaskIntoConstraints = false
         inputTextField.leadingAnchor.constraint(equalTo: textView.leadingAnchor, constant: 4.0).isActive = true
@@ -117,4 +122,16 @@ extension ChatLogController: SideBarDelegate {
         }
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        inputTextField.endEditing(true)
+    }
+    
+}
+
+extension ChatLogController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        inputTextField.endEditing(true)
+        return true
+    }
 }
