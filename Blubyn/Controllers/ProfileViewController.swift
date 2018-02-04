@@ -16,13 +16,29 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet weak var editProfileButton: UIButton!
     
-    @IBOutlet weak var firstNameTextField: JSTextField!
+    @IBOutlet weak var firstNameTextField: JSTextField! {
+        didSet {
+            firstNameTextField.delegate = self
+        }
+    }
     
-    @IBOutlet weak var lastNameTextField: JSTextField!
+    @IBOutlet weak var lastNameTextField: JSTextField! {
+        didSet {
+            lastNameTextField.delegate = self
+        }
+    }
     
-    @IBOutlet weak var phoneNumberTextField: JSTextField!
+    @IBOutlet weak var phoneNumberTextField: JSTextField! {
+        didSet {
+            phoneNumberTextField.delegate = self
+        }
+    }
     
-    @IBOutlet weak var emailTextField: JSTextField!
+    @IBOutlet weak var emailTextField: JSTextField! {
+        didSet {
+            emailTextField.delegate = self
+        }
+    }
     
     fileprivate var isEditingMode: Bool = false
     
@@ -73,4 +89,22 @@ class ProfileViewController: UIViewController {
         }
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        firstNameTextField.resignFirstResponder()
+        lastNameTextField.resignFirstResponder()
+        phoneNumberTextField.resignFirstResponder()
+        emailTextField.resignFirstResponder()
+    }
+    
+}
+
+extension ProfileViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        firstNameTextField.endEditing(true)
+        lastNameTextField.endEditing(true)
+        phoneNumberTextField.endEditing(true)
+        emailTextField.endEditing(true)
+        return true
+    }
 }

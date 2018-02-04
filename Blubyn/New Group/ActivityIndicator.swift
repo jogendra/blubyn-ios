@@ -80,10 +80,6 @@ public class ActivityIndicator {
         addToVIew(uiView: view)
         return
       }
-
-      if let uiView = UIApplication.topViewController()?.view {
-        addToVIew(uiView: uiView)
-      }
   }
 
   public func addToVIew(uiView: UIView) {

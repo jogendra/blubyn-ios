@@ -5,7 +5,7 @@
 //  Created by JOGENDRA on 26/12/17.
 //  Copyright © 2017 Kush Taneja. All rights reserved.
 //
-
+import UIKit
 import Foundation
 import CoreLocation
 
@@ -47,8 +47,7 @@ class Location: NSObject {
     }
     openAction.setValue(UIColor.appThemeColor, forKey: "titleTextColor")
     alertController.addAction(openAction)
-
-    UIApplication.topViewController()?.present(alertController, animated: true, completion: nil)
+    // TODO: Present Alert
   }
 }
 
@@ -56,8 +55,6 @@ extension Location: CLLocationManagerDelegate {
 
   func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
     if let location = locations.first {
-      UserDefaults.standard.set(location.coordinate.latitude, forKey: GoKeys.currentLat)
-      UserDefaults.standard.set(location.coordinate.longitude, forKey: GoKeys.currentLng)
       manager.stopUpdatingLocation()
     }
     else {

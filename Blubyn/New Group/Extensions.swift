@@ -93,39 +93,6 @@ extension UIFont {
     }
     
 }
-extension UIApplication {
-    
-    class func topViewController(_ base: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController? {
-        if let nav = base as? UINavigationController {
-            return topViewController(nav.visibleViewController)
-        }
-        if let tab = base as? UITabBarController {
-            if let selected = tab.selectedViewController {
-                return topViewController(selected)
-            }
-        }
-        if let presented = base?.presentedViewController {
-            return topViewController(presented)
-        }
-        return base
-    }
-
-  class func navigationController() -> UINavigationController {
-    let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    return appDelegate.navigationController!
-  }
-
-  class func makeNavigationBarTransparent(statusBarStyle: UIStatusBarStyle? = .lightContent) {
-      WheelstreetViews.statusBarTo(color: .clear, style: statusBarStyle ?? .lightContent)
-      navigationController().isNavigationBarHidden = false
-      navigationController().navigationBar.barTintColor = UIColor.white
-      navigationController().navigationBar.tintColor = UIColor.white
-      navigationController().navigationBar.backgroundColor = UIColor.clear
-      navigationController().navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
-     navigationController().navigationBar.setBackgroundImage(UIImage(), for: .default)
-     navigationController().navigationBar.shadowImage = UIImage()
-  }
-}
 
 
 extension UIViewController {
