@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9Ln-W6-hz1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YGD-Dr-Cd5">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -109,7 +109,7 @@
         <!--Profile View Controller-->
         <scene sceneID="Vzh-ob-Air">
             <objects>
-                <viewController id="QXI-YC-YIT" customClass="ProfileViewController" customModule="Blubyn" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="profilevc" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QXI-YC-YIT" customClass="ProfileViewController" customModule="Blubyn" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SXT-mM-5QR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -279,7 +279,7 @@
         <!--Settings Table View Controller-->
         <scene sceneID="sMU-AS-gbf">
             <objects>
-                <tableViewController id="9Ln-W6-hz1" customClass="SettingsTableViewController" customModule="Blubyn" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="settingvc" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9Ln-W6-hz1" customClass="SettingsTableViewController" customModule="Blubyn" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="OE3-RG-bqB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -31,6 +31,8 @@ class ProfileViewController: UIViewController {
         initialUISetups()
         textFieldsEditingMode(isEditable: false)
         editButtonInitialUISetup()
+        
+        self.navigationItem.title  = "Edit Profile"
     }
     
     fileprivate func initialUISetups() {
