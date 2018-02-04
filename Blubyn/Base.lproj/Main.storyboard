@@ -274,7 +274,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="66n-YU-0Ur" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3454" y="-161"/>
+            <point key="canvasLocation" x="4238" y="-145"/>
         </scene>
         <!--Settings Table View Controller-->
         <scene sceneID="sMU-AS-gbf">
@@ -284,8 +284,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="cfC-yg-Wh6">
+                            <rect key="frame" x="0.0" y="72" width="375" height="1"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="gVc-Bs-rt6" detailTextLabel="caS-Sq-TEO" style="IBUITableViewCellStyleSubtitle" id="rpe-AE-x8l">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" textLabel="gVc-Bs-rt6" detailTextLabel="caS-Sq-TEO" style="IBUITableViewCellStyleSubtitle" id="rpe-AE-x8l">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rpe-AE-x8l" id="ikD-kV-d7n">
@@ -315,10 +320,11 @@
                             <outlet property="delegate" destination="9Ln-W6-hz1" id="eeV-zT-LBL"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="uiT-xq-HIm"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XUk-p4-e80" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4400" y="-144"/>
+            <point key="canvasLocation" x="3575" y="-145"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cHo-xn-LD3">

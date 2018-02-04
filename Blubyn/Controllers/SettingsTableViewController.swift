@@ -9,43 +9,49 @@
 import UIKit
 
 class SettingsTableViewController: UITableViewController {
+    
+    let settingHeadings: [String] = ["Mute Notifications", "Speak out incoming messages", "Voice Chat preview messages"]
+    let settingDescription: [String] = ["Click to mute Notifications", "Click to disable", "Click to preview voice messages before sending"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return settingHeadings.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
         // Configure the cell...
+        cell.textLabel?.text = settingHeadings[indexPath.row]
+        cell.detailTextLabel?.text = settingDescription[indexPath.row]
+        
+        let switchView = UISwitch(frame: .zero)
+        switchView.setOn(false, animated: true)
+        switchView.tag = indexPath.row // for detect which row switch Changed
+        switchView.addTarget(self, action: #selector(self.switchChanged(_:)), for: .valueChanged)
+        cell.accessoryView = switchView
+        
 
         return cell
     }
-    */
+    
+    @objc func switchChanged(_ sender : UISwitch!){
+        
+        print("table row switch Changed \(sender.tag)")
+        print("The switch is \(sender.isOn ? "ON" : "OFF")")
+    }
 
     /*
     // Override to support conditional editing of the table view.
