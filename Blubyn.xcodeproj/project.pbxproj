@@ -21,6 +21,7 @@
 		4095E3D52025E2900088A80F /* Services in Resources */ = {isa = PBXBuildFile; fileRef = 4095E3D42025E2900088A80F /* Services */; };
 		40ADAB672025F9E7000DD816 /* JSTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ADAB662025F9E7000DD816 /* JSTextField.swift */; };
 		40ADAB692025FC7F000DD816 /* TextFieldEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ADAB682025FC7E000DD816 /* TextFieldEffects.swift */; };
+		40ADAB6B2026C553000DD816 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ADAB6A2026C553000DD816 /* SettingsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		4095E3D42025E2900088A80F /* Services */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Services; sourceTree = "<group>"; };
 		40ADAB662025F9E7000DD816 /* JSTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSTextField.swift; sourceTree = "<group>"; };
 		40ADAB682025FC7E000DD816 /* TextFieldEffects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldEffects.swift; sourceTree = "<group>"; };
+		40ADAB6A2026C553000DD816 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		A0F07E52677C77E94D50102B /* Pods_Blubyn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Blubyn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F481D7FCD3FC9211A4D2EDEB /* Pods-Blubyn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blubyn.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Blubyn/Pods-Blubyn.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -108,6 +110,7 @@
 				401724BA20233A81008F24BD /* LoginViewController.swift */,
 				4039760520249409000A3AF2 /* ChatLogController.swift */,
 				4095E3D02025E0FA0088A80F /* ProfileViewController */,
+				40ADAB6A2026C553000DD816 /* SettingsTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 				4039760620249409000A3AF2 /* ChatLogController.swift in Sources */,
 				401724BB20233A81008F24BD /* LoginViewController.swift in Sources */,
 				401724B920233A81008F24BD /* AppDelegate.swift in Sources */,
+				40ADAB6B2026C553000DD816 /* SettingsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
