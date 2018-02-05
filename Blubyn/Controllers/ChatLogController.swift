@@ -26,7 +26,18 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
         return textField
     }()
     
+    let textView: UIView = {
+        let textFieldview = UIView()
+        textFieldview.backgroundColor = UIColor.white
+        textFieldview.translatesAutoresizingMaskIntoConstraints = false
+        return textFieldview
+    }()
+    
     let cellId = "cellId"
+    
+    var keyboardHeight: CGFloat = 0.0
+    
+    var textViewBottomAnchor: NSLayoutConstraint?
     
     var userMessages: [String] = ["Hey there!", "I want to book flight for Pokhara, Nepal", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s", "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.", "Book a hotel for me near lakeside", "book returning flight"]
     
@@ -44,16 +55,33 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
         collectionView?.register(ChatMessagesCell.self, forCellWithReuseIdentifier: cellId)
         collectionView?.backgroundColor = UIColor.chatbackgroundColor
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        
+        // Register Notification, To know When Key Board Appear.
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: Notification.Name.UIKeyboardWillShow, object: nil)
+        
+        // Register Notification, To know When Key Board Hides.
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        
+        // De register the notifications
+        NotificationCenter.default.removeObserver(self)
+    }
 
     fileprivate func setupInputComponents() {
-        let textView = UIView()
-        textView.backgroundColor = UIColor.white
+        
+        // Text View setups
         view.addSubview(textView)
-        textView.translatesAutoresizingMaskIntoConstraints = false
         textView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         textView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        textView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
         textView.heightAnchor.constraint(equalToConstant: 44.0).isActive = true
+        textViewBottomAnchor = textView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+        textViewBottomAnchor?.isActive = true
         
         let voiceButton = UIButton(type: .system)
         let voiceButtonImage = UIImage(named: DefaultConstants.voiceButtonImageName)
@@ -69,6 +97,7 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
         let sendButtonImage = UIImage(named: DefaultConstants.sendButtonImageName)
         sendButton.setImage(sendButtonImage, for: .normal)
         textView.addSubview(sendButton)
+        sendButton.addTarget(self, action: #selector(didTapSend), for: .touchUpInside)
         sendButton.translatesAutoresizingMaskIntoConstraints = false
         sendButton.topAnchor.constraint(equalTo: textView.topAnchor).isActive = true
         sendButton.trailingAnchor.constraint(equalTo: voiceButton.leadingAnchor).isActive = true
@@ -90,6 +119,35 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
         separator.trailingAnchor.constraint(equalTo: textView.trailingAnchor).isActive = true
         separator.topAnchor.constraint(equalTo: textView.topAnchor).isActive = true
         separator.heightAnchor.constraint(equalToConstant: 1.0).isActive = true
+        
+    }
+    
+    // MARK: - Keyboard Events
+    
+    @objc func keyboardWillShow(_ notification: Notification) {
+        if let keyboardFrame: NSValue = notification.userInfo![UIKeyboardFrameEndUserInfoKey] as? NSValue {
+            let keyboardRectangle = keyboardFrame.cgRectValue
+            keyboardHeight = keyboardRectangle.height
+        }
+        
+        UIView.animate(withDuration: 1.0, animations: {
+            self.textViewBottomAnchor = self.textView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -self.keyboardHeight)
+            self.textViewBottomAnchor?.isActive = true
+            self.textView.updateConstraints()
+            self.textView.setNeedsLayout()
+            self.textView.layoutIfNeeded()
+
+        })
+    }
+    
+    @objc func keyboardWillHide(_ notification: Notification) {
+        
+        UIView.animate(withDuration: 1.0, animations: {
+            self.textViewBottomAnchor?.constant = 0
+            self.textViewBottomAnchor = self.textView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor)
+            self.textViewBottomAnchor?.isActive = true
+            self.textView.updateConstraints()
+        })
         
     }
     
@@ -148,6 +206,15 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
         let size = CGSize(width: 300.0, height: 1000)
         let options = NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin)
         return NSString(string: text).boundingRect(with: size, options: options, attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 17.0)], context: nil)
+    }
+    
+    @objc fileprivate func didTapSend() {
+        
+        if let enteredText = inputTextField.text {
+            messages.append(enteredText)
+        }
+        collectionView?.reloadData()
+        inputTextField.text = nil
     }
     
     fileprivate func sideBarSetup() {
