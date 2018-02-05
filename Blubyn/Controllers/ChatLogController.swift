@@ -129,24 +129,21 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
             let keyboardRectangle = keyboardFrame.cgRectValue
             keyboardHeight = keyboardRectangle.height
         }
+        let keyboardDuration = notification.userInfo?[UIKeyboardAnimationDurationUserInfoKey] as? Double
         
-        UIView.animate(withDuration: 1.0, animations: {
-            self.textViewBottomAnchor = self.textView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -self.keyboardHeight)
-            self.textViewBottomAnchor?.isActive = true
-            self.textView.updateConstraints()
-            self.textView.setNeedsLayout()
-            self.textView.layoutIfNeeded()
-
+        textViewBottomAnchor?.constant = -keyboardHeight
+        UIView.animate(withDuration: keyboardDuration!, animations: {
+            self.view.layoutIfNeeded()
         })
     }
     
     @objc func keyboardWillHide(_ notification: Notification) {
         
-        UIView.animate(withDuration: 1.0, animations: {
-            self.textViewBottomAnchor?.constant = 0
-            self.textViewBottomAnchor = self.textView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor)
-            self.textViewBottomAnchor?.isActive = true
-            self.textView.updateConstraints()
+        let keyboardDuration = notification.userInfo?[UIKeyboardAnimationDurationUserInfoKey] as? Double
+        textViewBottomAnchor?.constant = 0
+        
+        UIView.animate(withDuration: keyboardDuration!, animations: {
+            self.view.layoutIfNeeded()
         })
         
     }
