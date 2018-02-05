@@ -69,6 +69,7 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
         let sendButtonImage = UIImage(named: DefaultConstants.sendButtonImageName)
         sendButton.setImage(sendButtonImage, for: .normal)
         textView.addSubview(sendButton)
+        sendButton.addTarget(self, action: #selector(didTapSend), for: .touchUpInside)
         sendButton.translatesAutoresizingMaskIntoConstraints = false
         sendButton.topAnchor.constraint(equalTo: textView.topAnchor).isActive = true
         sendButton.trailingAnchor.constraint(equalTo: voiceButton.leadingAnchor).isActive = true
@@ -148,6 +149,15 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
         let size = CGSize(width: 300.0, height: 1000)
         let options = NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin)
         return NSString(string: text).boundingRect(with: size, options: options, attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 17.0)], context: nil)
+    }
+    
+    @objc fileprivate func didTapSend() {
+        
+        if let enteredText = inputTextField.text {
+            messages.append(enteredText)
+        }
+        collectionView?.reloadData()
+        inputTextField.text = nil
     }
     
     fileprivate func sideBarSetup() {
