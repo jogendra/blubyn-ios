@@ -28,7 +28,11 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
     
     let cellId = "cellId"
     
-    let messages: [String] = ["Hey there!", "My name is jogendra and i am studyng at indian institute of technology banaras hindu university varanasi", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries", "t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."]
+    var userMessages: [String] = ["Hey there!", "I want to book flight for Pokhara, Nepal", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s", "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.", "Book a hotel for me near lakeside", "book returning flight"]
+    
+    var systemMessages: [String] = ["Hello Jogendra!", "Pluto at your service - your guide and concierge to help you with the planning ticket booking and finding new and exotic places.", "Go on! Try me out. Won't take long. I promise."]
+    
+    lazy var messages: [String] = systemMessages + userMessages
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +42,7 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
         
         collectionView?.contentInset = UIEdgeInsets(top: 8.0, left: 0, bottom: 52.0, right: 0)
         collectionView?.register(ChatMessagesCell.self, forCellWithReuseIdentifier: cellId)
+        collectionView?.backgroundColor = UIColor.chatbackgroundColor
     }
 
     fileprivate func setupInputComponents() {
@@ -97,14 +102,34 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! ChatMessagesCell
+
         let message = messages[indexPath.item]
         cell.chatTextView.text = message
+        
+        // Align chat cell according
+        if userMessages.contains(message) {
+            
+            cell.bubbleView.backgroundColor = UIColor.white
+            cell.chatTextView.textColor = UIColor.black
+            
+            cell.bubbleViewRightAnchor?.isActive = true
+            cell.bubbleViewLeftAnchor?.isActive = false
+            
+        } else {
+            
+            cell.bubbleView.backgroundColor = UIColor.chatThemeColor
+            cell.chatTextView.textColor = UIColor.white
+
+            cell.bubbleViewRightAnchor?.isActive = false
+            cell.bubbleViewLeftAnchor?.isActive = true
+        }
         
         //Modify the width accordingly
         cell.bubbleWidthAnchor?.constant = estimateFrameForText(text: message).width + 32.0
         
         return cell
     }
+    
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
@@ -120,7 +145,7 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
     }
     
     private func estimateFrameForText(text: String) -> CGRect {
-        let size = CGSize(width: 200.0, height: 1000)
+        let size = CGSize(width: 300.0, height: 1000)
         let options = NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin)
         return NSString(string: text).boundingRect(with: size, options: options, attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 17.0)], context: nil)
     }
