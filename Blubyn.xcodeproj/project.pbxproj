@@ -14,6 +14,8 @@
 		401724C020233A81008F24BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 401724BF20233A81008F24BD /* Assets.xcassets */; };
 		401724C320233A81008F24BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 401724C120233A81008F24BD /* LaunchScreen.storyboard */; };
 		4039760620249409000A3AF2 /* ChatLogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4039760520249409000A3AF2 /* ChatLogController.swift */; };
+		407749CE2028AA6000B4515A /* OneWayFlightViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407749CC2028AA6000B4515A /* OneWayFlightViewCell.swift */; };
+		407749CF2028AA6000B4515A /* OneWayFlightViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 407749CD2028AA6000B4515A /* OneWayFlightViewCell.xib */; };
 		4095E3CA2025BC760088A80F /* SideBarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4095E3C82025BC750088A80F /* SideBarTableViewController.swift */; };
 		4095E3CB2025BC760088A80F /* SideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4095E3C92025BC760088A80F /* SideBar.swift */; };
 		4095E3CE2025E0F10088A80F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4095E3CC2025E0F10088A80F /* ProfileViewController.swift */; };
@@ -44,6 +46,8 @@
 		401724C220233A81008F24BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		401724C420233A81008F24BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4039760520249409000A3AF2 /* ChatLogController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLogController.swift; sourceTree = "<group>"; };
+		407749CC2028AA6000B4515A /* OneWayFlightViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneWayFlightViewCell.swift; sourceTree = "<group>"; };
+		407749CD2028AA6000B4515A /* OneWayFlightViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OneWayFlightViewCell.xib; sourceTree = "<group>"; };
 		4095E3C82025BC750088A80F /* SideBarTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBarTableViewController.swift; sourceTree = "<group>"; };
 		4095E3C92025BC760088A80F /* SideBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBar.swift; sourceTree = "<group>"; };
 		4095E3CC2025E0F10088A80F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -188,6 +192,8 @@
 			isa = PBXGroup;
 			children = (
 				40ADAB8920279391000DD816 /* ChatMessagesCell.swift */,
+				407749CC2028AA6000B4515A /* OneWayFlightViewCell.swift */,
+				407749CD2028AA6000B4515A /* OneWayFlightViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -269,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				401724C320233A81008F24BD /* LaunchScreen.storyboard in Resources */,
+				407749CF2028AA6000B4515A /* OneWayFlightViewCell.xib in Resources */,
 				401724C020233A81008F24BD /* Assets.xcassets in Resources */,
 				401724BE20233A81008F24BD /* Main.storyboard in Resources */,
 			);
@@ -358,6 +365,7 @@
 				40ADAB692025FC7F000DD816 /* TextFieldEffects.swift in Sources */,
 				4095E3CB2025BC760088A80F /* SideBar.swift in Sources */,
 				40ADAB73202785AA000DD816 /* PulseAnimation.swift in Sources */,
+				407749CE2028AA6000B4515A /* OneWayFlightViewCell.swift in Sources */,
 				4095E3CA2025BC760088A80F /* SideBarTableViewController.swift in Sources */,
 				4039760620249409000A3AF2 /* ChatLogController.swift in Sources */,
 				40ADAB8A20279391000DD816 /* ChatMessagesCell.swift in Sources */,
