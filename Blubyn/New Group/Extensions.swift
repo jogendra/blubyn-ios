@@ -412,7 +412,15 @@ extension Date {
 extension UIColor {
     
     class var appThemeColor: UIColor {
-        return  UIColor(rgb: 0x19CE91)
+        return  UIColor(named: "appThemeColor")!
+    }
+    
+    class var chatbackgroundColor: UIColor {
+        return UIColor(red: 245/255, green: 245/255, blue: 245/255, alpha: 1.0)
+    }
+    
+    class var chatThemeColor: UIColor {
+        return UIColor(red: 0.02, green: 0.33, blue: 0.46, alpha: 1.0)
     }
 
     class var goThemeColor: UIColor {
