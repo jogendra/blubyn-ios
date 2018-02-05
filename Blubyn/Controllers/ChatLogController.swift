@@ -34,6 +34,7 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
     }()
     
     let cellId = "cellId"
+    let oneWayCellId = "oneWayFlightCell"
     
     var keyboardHeight: CGFloat = 0.0
     
@@ -54,6 +55,10 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
         collectionView?.contentInset = UIEdgeInsets(top: 8.0, left: 0, bottom: 52.0, right: 0)
         collectionView?.register(ChatMessagesCell.self, forCellWithReuseIdentifier: cellId)
         collectionView?.backgroundColor = UIColor.chatbackgroundColor
+        
+        // Regsiter One Way Flight Cell
+        let customFlightCellNib = UINib(nibName: "OneWayFlightViewCell", bundle: nil)
+        collectionView?.register(customFlightCellNib, forCellWithReuseIdentifier: oneWayCellId)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -160,28 +165,33 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
 
         let message = messages[indexPath.item]
         cell.chatTextView.text = message
-        
+
         // Align chat cell according
         if userMessages.contains(message) {
-            
+
             cell.bubbleView.backgroundColor = UIColor.white
             cell.chatTextView.textColor = UIColor.black
-            
+
             cell.bubbleViewRightAnchor?.isActive = true
             cell.bubbleViewLeftAnchor?.isActive = false
-            
+
         } else {
-            
+
             cell.bubbleView.backgroundColor = UIColor.chatThemeColor
             cell.chatTextView.textColor = UIColor.white
 
             cell.bubbleViewRightAnchor?.isActive = false
             cell.bubbleViewLeftAnchor?.isActive = true
         }
-        
+
         //Modify the width accordingly
         cell.bubbleWidthAnchor?.constant = estimateFrameForText(text: message).width + 32.0
         
+        if indexPath.item > 5 {
+            let customCell = collectionView.dequeueReusableCell(withReuseIdentifier: oneWayCellId, for: indexPath) as! OneWayFlightViewCell
+            return customCell
+        }
+
         return cell
     }
     

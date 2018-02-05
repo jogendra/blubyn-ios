@@ -63,7 +63,7 @@
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FSX-J2-gVg">
                         <rect key="frame" x="345" y="68" width="67" height="24"/>
                         <color key="backgroundColor" red="1" green="0.086666405789999998" blue="0.17984239939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <state key="normal" title="Button">
+                        <state key="normal" title="BOOK">
                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </state>
                     </button>
