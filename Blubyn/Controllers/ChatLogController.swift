@@ -14,6 +14,12 @@ fileprivate enum DefaultConstants {
     static let voiceButtonImageName: String = "microphone"
 }
 
+enum Cells {
+    case chatCell
+    case oneWayFlight
+    case twoWayFlight
+}
+
 
 class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
@@ -36,6 +42,8 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
     let cellId = "cellId"
     let oneWayCellId = "oneWayFlightCell"
     let twoWayCellId = "twoWayFlightCell"
+    
+    var cellType: Cells?
     
     var keyboardHeight: CGFloat = 0.0
     
@@ -194,10 +202,19 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
         //Modify the width accordingly
         cell.bubbleWidthAnchor?.constant = estimateFrameForText(text: message).width + 32.0
         
-        if indexPath.item > 5 {
-            let customCell = collectionView.dequeueReusableCell(withReuseIdentifier: oneWayCellId, for: indexPath) as! OneWayFlightViewCell
-            return customCell
+        if indexPath.item > 4, indexPath.item < 6 {
+            let oneWayFlightCell = collectionView.dequeueReusableCell(withReuseIdentifier: oneWayCellId, for: indexPath) as! OneWayFlightViewCell
+            cellType = Cells.oneWayFlight
+            return oneWayFlightCell
         }
+        
+        if indexPath.item > 5 {
+            let twoWayFlightCell = collectionView.dequeueReusableCell(withReuseIdentifier: twoWayCellId, for: indexPath) as! TwoWayFlightViewCell
+            cellType = Cells.twoWayFlight
+            return twoWayFlightCell
+        }
+        
+        cellType = Cells.chatCell
 
         return cell
     }
@@ -209,7 +226,13 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
         let text = messages[indexPath.item]
         cellHeight = estimateFrameForText(text: text).height + 20.0
         
-        return CGSize(width: collectionView.frame.width, height: cellHeight)
+        if cellType == Cells.oneWayFlight {
+            return CGSize(width: collectionView.frame.width, height: 112 + 20.0)
+        } else if cellType == Cells.twoWayFlight {
+            return CGSize(width: collectionView.frame.width, height: 200 + 20.0)
+        } else {
+            return CGSize(width: collectionView.frame.width, height: cellHeight)
+        }
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
