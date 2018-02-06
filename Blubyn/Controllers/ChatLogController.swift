@@ -21,7 +21,7 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
     
     lazy var inputTextField: UITextField = {
         let textField = UITextField()
-        textField.placeholder = "Send a Message..."
+        textField.placeholder = "Send a message..."
         textField.delegate = self
         return textField
     }()
