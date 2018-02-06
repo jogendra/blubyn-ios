@@ -35,6 +35,7 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
     
     let cellId = "cellId"
     let oneWayCellId = "oneWayFlightCell"
+    let twoWayCellId = "twoWayFlightCell"
     
     var keyboardHeight: CGFloat = 0.0
     
@@ -53,12 +54,18 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
         sideBarSetup()
         
         collectionView?.contentInset = UIEdgeInsets(top: 8.0, left: 0, bottom: 52.0, right: 0)
-        collectionView?.register(ChatMessagesCell.self, forCellWithReuseIdentifier: cellId)
         collectionView?.backgroundColor = UIColor.chatbackgroundColor
         
+        // Register Chat Cell
+        collectionView?.register(ChatMessagesCell.self, forCellWithReuseIdentifier: cellId)
+        
         // Regsiter One Way Flight Cell
-        let customFlightCellNib = UINib(nibName: "OneWayFlightViewCell", bundle: nil)
-        collectionView?.register(customFlightCellNib, forCellWithReuseIdentifier: oneWayCellId)
+        let oneWayFlightCellNib = UINib(nibName: "OneWayFlightViewCell", bundle: nil)
+        collectionView?.register(oneWayFlightCellNib, forCellWithReuseIdentifier: oneWayCellId)
+        
+        // Register Two Way Flight Cell
+        let twoWayFlightCellNib = UINib(nibName: "TwoWayFlightViewCell", bundle: nil)
+        collectionView?.register(twoWayFlightCellNib, forCellWithReuseIdentifier: twoWayCellId)
     }
     
     override func viewDidAppear(_ animated: Bool) {
