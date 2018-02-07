@@ -171,7 +171,17 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
     // MARK: - Collection View Methods
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return messages.count
+        switch section {
+        case 0:
+            return messages.count
+        case 1:
+            return 5
+        case 2:
+            return 5
+        default:
+            return messages.count
+        }
+        
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -202,25 +212,22 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
         //Modify the width accordingly
         cell.bubbleWidthAnchor?.constant = estimateFrameForText(text: message).width + 32.0
         
-        if indexPath.item > 4, indexPath.item < 6 {
+        if indexPath.section == 0 {
+            cellType = Cells.chatCell
+            return cell
+        } else if indexPath.section == 1 {
             let oneWayFlightCell = collectionView.dequeueReusableCell(withReuseIdentifier: oneWayCellId, for: indexPath) as! OneWayFlightViewCell
             cellType = Cells.oneWayFlight
             return oneWayFlightCell
-        }
-        
-        if indexPath.item > 5 {
+        } else {
             let twoWayFlightCell = collectionView.dequeueReusableCell(withReuseIdentifier: twoWayCellId, for: indexPath) as! TwoWayFlightViewCell
             cellType = Cells.twoWayFlight
             return twoWayFlightCell
         }
-        
-        cellType = Cells.chatCell
-
-        return cell
     }
     
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 2
+        return 3
     }
     
     
@@ -234,9 +241,8 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
             cellHeight = 112
         } else if cellType == Cells.twoWayFlight {
             cellHeight = 201
-        } else {
-            
         }
+        
         return CGSize(width: collectionView.frame.width, height: cellHeight)
     }
     
