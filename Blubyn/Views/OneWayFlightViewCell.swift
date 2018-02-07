@@ -18,7 +18,7 @@ class OneWayFlightViewCell: UICollectionViewCell {
     
     fileprivate func initialCellUISetups() {
         self.layer.borderWidth = 1.0
-        self.layer.borderColor = UIColor.black.withAlphaComponent(0.6).cgColor
+        self.layer.borderColor = UIColor.black.withAlphaComponent(0.4).cgColor
     }
 
 }

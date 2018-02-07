@@ -19,12 +19,12 @@
                 <rect key="frame" x="0.0" y="0.0" width="436" height="201"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="etE-hA-N8t">
-                        <rect key="frame" x="11" y="20" width="50" height="50"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="airplane-icon" translatesAutoresizingMaskIntoConstraints="NO" id="etE-hA-N8t">
+                        <rect key="frame" x="11" y="20" width="40" height="40"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5yM-iC-gRr">
-                        <rect key="frame" x="13" y="86" width="50" height="50"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="airplane-icon" translatesAutoresizingMaskIntoConstraints="NO" id="5yM-iC-gRr">
+                        <rect key="frame" x="13" y="86" width="40" height="40"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10:35 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pPf-vh-Lmg">
@@ -160,4 +160,7 @@
             <point key="canvasLocation" x="-102" y="-47.5"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="airplane-icon" width="50" height="50"/>
+    </resources>
 </document>
