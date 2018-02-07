@@ -179,7 +179,7 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
         case 2:
             return 5
         default:
-            return messages.count
+            return 0
         }
         
     }
@@ -237,9 +237,9 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
         let text = messages[indexPath.item]
         cellHeight = estimateFrameForText(text: text).height + 20.0
         
-        if cellType == Cells.oneWayFlight {
+        if indexPath.section == 1 {
             cellHeight = 112
-        } else if cellType == Cells.twoWayFlight {
+        } else if indexPath.section == 2 {
             cellHeight = 201
         }
         
