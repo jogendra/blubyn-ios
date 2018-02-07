@@ -109,6 +109,7 @@
                     </imageView>
                 </subviews>
             </view>
+            <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="isz-1I-70F" secondAttribute="trailing" constant="106" id="0Su-xp-uGn"/>
                 <constraint firstItem="xHx-P6-lVO" firstAttribute="leading" secondItem="5qM-5q-nWi" secondAttribute="trailing" constant="19" id="2oF-wW-enJ"/>
