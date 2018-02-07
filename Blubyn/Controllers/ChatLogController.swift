@@ -14,6 +14,12 @@ fileprivate enum DefaultConstants {
     static let voiceButtonImageName: String = "microphone"
 }
 
+enum Cells {
+    case chatCell
+    case oneWayFlight
+    case twoWayFlight
+}
+
 
 class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
@@ -21,7 +27,7 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
     
     lazy var inputTextField: UITextField = {
         let textField = UITextField()
-        textField.placeholder = "Send a Message..."
+        textField.placeholder = "Send a message..."
         textField.delegate = self
         return textField
     }()
@@ -34,6 +40,10 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
     }()
     
     let cellId = "cellId"
+    let oneWayCellId = "oneWayFlightCell"
+    let twoWayCellId = "twoWayFlightCell"
+    
+    var cellType: Cells?
     
     var keyboardHeight: CGFloat = 0.0
     
@@ -52,8 +62,18 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
         sideBarSetup()
         
         collectionView?.contentInset = UIEdgeInsets(top: 8.0, left: 0, bottom: 52.0, right: 0)
-        collectionView?.register(ChatMessagesCell.self, forCellWithReuseIdentifier: cellId)
         collectionView?.backgroundColor = UIColor.chatbackgroundColor
+        
+        // Register Chat Cell
+        collectionView?.register(ChatMessagesCell.self, forCellWithReuseIdentifier: cellId)
+        
+        // Regsiter One Way Flight Cell
+        let oneWayFlightCellNib = UINib(nibName: "OneWayFlightViewCell", bundle: nil)
+        collectionView?.register(oneWayFlightCellNib, forCellWithReuseIdentifier: oneWayCellId)
+        
+        // Register Two Way Flight Cell
+        let twoWayFlightCellNib = UINib(nibName: "TwoWayFlightViewCell", bundle: nil)
+        collectionView?.register(twoWayFlightCellNib, forCellWithReuseIdentifier: twoWayCellId)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -160,29 +180,47 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
 
         let message = messages[indexPath.item]
         cell.chatTextView.text = message
-        
+
         // Align chat cell according
         if userMessages.contains(message) {
-            
+
             cell.bubbleView.backgroundColor = UIColor.white
             cell.chatTextView.textColor = UIColor.black
-            
+
             cell.bubbleViewRightAnchor?.isActive = true
             cell.bubbleViewLeftAnchor?.isActive = false
-            
+
         } else {
-            
+
             cell.bubbleView.backgroundColor = UIColor.chatThemeColor
             cell.chatTextView.textColor = UIColor.white
 
             cell.bubbleViewRightAnchor?.isActive = false
             cell.bubbleViewLeftAnchor?.isActive = true
         }
-        
+
         //Modify the width accordingly
         cell.bubbleWidthAnchor?.constant = estimateFrameForText(text: message).width + 32.0
         
+        if indexPath.item > 4, indexPath.item < 6 {
+            let oneWayFlightCell = collectionView.dequeueReusableCell(withReuseIdentifier: oneWayCellId, for: indexPath) as! OneWayFlightViewCell
+            cellType = Cells.oneWayFlight
+            return oneWayFlightCell
+        }
+        
+        if indexPath.item > 5 {
+            let twoWayFlightCell = collectionView.dequeueReusableCell(withReuseIdentifier: twoWayCellId, for: indexPath) as! TwoWayFlightViewCell
+            cellType = Cells.twoWayFlight
+            return twoWayFlightCell
+        }
+        
+        cellType = Cells.chatCell
+
         return cell
+    }
+    
+    override func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 2
     }
     
     
@@ -192,6 +230,13 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
         let text = messages[indexPath.item]
         cellHeight = estimateFrameForText(text: text).height + 20.0
         
+        if cellType == Cells.oneWayFlight {
+            cellHeight = 112
+        } else if cellType == Cells.twoWayFlight {
+            cellHeight = 201
+        } else {
+            
+        }
         return CGSize(width: collectionView.frame.width, height: cellHeight)
     }
     
