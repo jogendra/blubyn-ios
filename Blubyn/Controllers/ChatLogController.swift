@@ -219,6 +219,10 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
         return cell
     }
     
+    override func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 2
+    }
+    
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
@@ -227,12 +231,13 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
         cellHeight = estimateFrameForText(text: text).height + 20.0
         
         if cellType == Cells.oneWayFlight {
-            return CGSize(width: collectionView.frame.width, height: 112 + 20.0)
+            cellHeight = 112
         } else if cellType == Cells.twoWayFlight {
-            return CGSize(width: collectionView.frame.width, height: 200 + 20.0)
+            cellHeight = 201
         } else {
-            return CGSize(width: collectionView.frame.width, height: cellHeight)
+            
         }
+        return CGSize(width: collectionView.frame.width, height: cellHeight)
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
