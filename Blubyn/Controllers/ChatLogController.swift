@@ -250,6 +250,11 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
         inputTextField.resignFirstResponder()
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        //{top, left, bottom, right}
+        return UIEdgeInsetsMake(10, 0, 10, 0)
+    }
+    
     private func estimateFrameForText(text: String) -> CGRect {
         let size = CGSize(width: 300.0, height: 1000)
         let options = NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin)
