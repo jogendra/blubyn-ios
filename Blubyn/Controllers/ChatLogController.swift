@@ -260,6 +260,7 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
         
         if let enteredText = inputTextField.text {
             messages.append(enteredText)
+            userMessages.append(enteredText)
         }
         collectionView?.reloadData()
         inputTextField.text = nil
