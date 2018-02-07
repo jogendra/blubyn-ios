@@ -104,11 +104,12 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tjh-S5-2qG">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="airplane-icon" translatesAutoresizingMaskIntoConstraints="NO" id="Tjh-S5-2qG">
                         <rect key="frame" x="10" y="12" width="50" height="50"/>
                     </imageView>
                 </subviews>
             </view>
+            <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="isz-1I-70F" secondAttribute="trailing" constant="106" id="0Su-xp-uGn"/>
                 <constraint firstItem="xHx-P6-lVO" firstAttribute="leading" secondItem="5qM-5q-nWi" secondAttribute="trailing" constant="19" id="2oF-wW-enJ"/>
@@ -153,4 +154,7 @@
             <point key="canvasLocation" x="-142.5" y="-77"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="airplane-icon" width="50" height="50"/>
+    </resources>
 </document>
