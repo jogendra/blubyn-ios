@@ -277,10 +277,11 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
         if let enteredText = inputTextField.text, !enteredText.isEmpty {
 //            messages.append(enteredText)
 //            userMessages.append(enteredText)
-            numberOfSections  = numberOfSections + 1
+            numberOfSections += 1
             newCellMessages.append(enteredText)
         }
         collectionView?.reloadData()
+        collectionView?.numberOfItems(inSection: 0)
         inputTextField.text = nil
     }
     
