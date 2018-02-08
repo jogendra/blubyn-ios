@@ -43,7 +43,7 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
     let oneWayCellId = "oneWayFlightCell"
     let twoWayCellId = "twoWayFlightCell"
     
-    var numberOfSections: Int = 0
+    var numberOfSections: Int = 3
     var numberOfItemsInASection: Int = 0
     
     var cellType: Cells?
@@ -55,6 +55,8 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
     var userMessages: [String] = ["Hey there!", "I want to book flight for Pokhara, Nepal", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s", "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.", "Book a hotel for me near lakeside", "book returning flight"]
     
     var systemMessages: [String] = ["Hello Jogendra!", "Pluto at your service - your guide and concierge to help you with the planning ticket booking and finding new and exotic places.", "Go on! Try me out. Won't take long. I promise."]
+    
+    var newCellMessages: [String] = []
     
     lazy var messages: [String] = systemMessages + userMessages
 
@@ -182,6 +184,8 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
             return numberOfItemsInASection
         case 2:
             return 5
+        case 3:
+            return newCellMessages.count
         default:
             numberOfItemsInASection = 5
             return numberOfItemsInASection
@@ -224,15 +228,16 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
             let oneWayFlightCell = collectionView.dequeueReusableCell(withReuseIdentifier: oneWayCellId, for: indexPath) as! OneWayFlightViewCell
             cellType = Cells.oneWayFlight
             return oneWayFlightCell
-        } else {
+        } else if indexPath.section == 2 {
             let twoWayFlightCell = collectionView.dequeueReusableCell(withReuseIdentifier: twoWayCellId, for: indexPath) as! TwoWayFlightViewCell
             cellType = Cells.twoWayFlight
             return twoWayFlightCell
+        } else {
+            return cell
         }
     }
     
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        numberOfSections = 3
         return numberOfSections
     }
     
@@ -270,8 +275,10 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
     @objc fileprivate func didTapSend() {
         
         if let enteredText = inputTextField.text, !enteredText.isEmpty {
-            messages.append(enteredText)
-            userMessages.append(enteredText)
+//            messages.append(enteredText)
+//            userMessages.append(enteredText)
+            numberOfSections  = numberOfSections + 1
+            newCellMessages.append(enteredText)
         }
         collectionView?.reloadData()
         inputTextField.text = nil
