@@ -43,6 +43,9 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
     let oneWayCellId = "oneWayFlightCell"
     let twoWayCellId = "twoWayFlightCell"
     
+    var numberOfSections: Int = 0
+    var numberOfItemsInASection: Int = 0
+    
     var cellType: Cells?
     
     var keyboardHeight: CGFloat = 0.0
@@ -175,11 +178,13 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
         case 0:
             return messages.count
         case 1:
-            return 5
+            numberOfItemsInASection = 5
+            return numberOfItemsInASection
         case 2:
             return 5
         default:
-            return 0
+            numberOfItemsInASection = 5
+            return numberOfItemsInASection
         }
         
     }
@@ -227,7 +232,8 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
     }
     
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 3
+        numberOfSections = 3
+        return numberOfSections
     }
     
     
@@ -263,7 +269,7 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
     
     @objc fileprivate func didTapSend() {
         
-        if let enteredText = inputTextField.text {
+        if let enteredText = inputTextField.text, !enteredText.isEmpty {
             messages.append(enteredText)
             userMessages.append(enteredText)
         }
