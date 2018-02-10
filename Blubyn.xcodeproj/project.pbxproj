@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		167FDD52C1CE1035E3174C0B /* Pods_Blubyn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0F07E52677C77E94D50102B /* Pods_Blubyn.framework */; };
+		4000C1D2202EFB530075BD1B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4000C1D1202EFB530075BD1B /* GoogleService-Info.plist */; };
 		401724B920233A81008F24BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401724B820233A81008F24BD /* AppDelegate.swift */; };
 		401724BB20233A81008F24BD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401724BA20233A81008F24BD /* LoginViewController.swift */; };
 		401724BE20233A81008F24BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 401724BC20233A81008F24BD /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		23DF05E6E384076C5DE26A02 /* Pods-Blubyn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blubyn.release.xcconfig"; path = "Pods/Target Support Files/Pods-Blubyn/Pods-Blubyn.release.xcconfig"; sourceTree = "<group>"; };
+		4000C1D1202EFB530075BD1B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		400120612023855E0088B283 /* Blubyn.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Blubyn.entitlements; sourceTree = "<group>"; };
 		401724B520233A81008F24BD /* Blubyn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blubyn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		401724B820233A81008F24BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 				400120612023855E0088B283 /* Blubyn.entitlements */,
 				401724C120233A81008F24BD /* LaunchScreen.storyboard */,
 				401724C420233A81008F24BD /* Info.plist */,
+				4000C1D1202EFB530075BD1B /* GoogleService-Info.plist */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 				401724C020233A81008F24BD /* Assets.xcassets in Resources */,
 				401724BE20233A81008F24BD /* Main.storyboard in Resources */,
 				40C010E92029725400E113D8 /* TwoWayFlightViewCell.xib in Resources */,
+				4000C1D2202EFB530075BD1B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,6 +329,8 @@
 				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -337,6 +343,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookShare.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
