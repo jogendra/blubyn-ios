@@ -8,7 +8,7 @@
 
 import UIKit
 import FBSDKLoginKit
-import Firebase
+import FirebaseAuth
 
 fileprivate enum DefaultValues {
     static let buttonCornerRadiusConstant: CGFloat = 4.0
@@ -56,7 +56,7 @@ class LoginViewController: UIViewController {
             }
             // User is sign in
             let chatStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let chatViewController = profileStoryboard.instantiateViewController(withIdentifier: "chatvc")
+            let chatViewController = chatStoryboard.instantiateViewController(withIdentifier: "chatvc")
             self.present(chatViewController, animated: true, completion: nil)
         })
     }
