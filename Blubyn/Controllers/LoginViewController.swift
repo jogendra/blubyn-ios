@@ -32,11 +32,12 @@ class LoginViewController: UIViewController {
 
     @IBAction func didTapFbLoginButton(_ sender: Any) {
         let facebookLoginManager = FBSDKLoginManager()
+        facebookLoginManager.logOut()
         facebookLoginManager.logIn(withReadPermissions: ["email"], from: self, handler: { result, error   in
-            let loginResult: FBSDKLoginManagerLoginResult = result!
+            let loginResult: FBSDKLoginManagerLoginResult? = result
             if error != nil {
                 debugPrint(error!.localizedDescription)
-            } else if loginResult.isCancelled {
+            } else if (loginResult?.isCancelled)! {
                 return
             } else {
                 self.fetchUserProfileData()

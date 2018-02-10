@@ -47,12 +47,12 @@
         <dict>
             <key>CFBundleURLSchemes</key>
             <array>
-                <string>fb140480786760926</string>
+                <string>fb135580973645179</string>
             </array>
         </dict>
     </array>
     <key>FacebookAppID</key>
-    <string>140480786760926</string>
+    <string>135580973645179</string>
     <key>FacebookDisplayName</key>
     <string>Blubyn iOS</string>
     <key>LSApplicationQueriesSchemes</key>
