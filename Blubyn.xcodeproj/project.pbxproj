@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		167FDD52C1CE1035E3174C0B /* Pods_Blubyn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0F07E52677C77E94D50102B /* Pods_Blubyn.framework */; };
 		4000C1D2202EFB530075BD1B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4000C1D1202EFB530075BD1B /* GoogleService-Info.plist */; };
+		4000C1D4202F425E0075BD1B /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4000C1D3202F425E0075BD1B /* AppConstants.swift */; };
 		401724B920233A81008F24BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401724B820233A81008F24BD /* AppDelegate.swift */; };
 		401724BB20233A81008F24BD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401724BA20233A81008F24BD /* LoginViewController.swift */; };
 		401724BE20233A81008F24BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 401724BC20233A81008F24BD /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 /* Begin PBXFileReference section */
 		23DF05E6E384076C5DE26A02 /* Pods-Blubyn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blubyn.release.xcconfig"; path = "Pods/Target Support Files/Pods-Blubyn/Pods-Blubyn.release.xcconfig"; sourceTree = "<group>"; };
 		4000C1D1202EFB530075BD1B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4000C1D3202F425E0075BD1B /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		400120612023855E0088B283 /* Blubyn.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Blubyn.entitlements; sourceTree = "<group>"; };
 		401724B520233A81008F24BD /* Blubyn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blubyn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		401724B820233A81008F24BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 				40ADAB7F2027861D000DD816 /* Reachability.swift */,
 				40ADAB7D2027861D000DD816 /* SwiftyJSON.swift */,
 				40ADAB7C2027861C000DD816 /* UIView+Reusable.swift */,
+				4000C1D3202F425E0075BD1B /* AppConstants.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -377,6 +380,7 @@
 				40ADAB672025F9E7000DD816 /* JSTextField.swift in Sources */,
 				40ADAB842027861D000DD816 /* SwiftyJSON.swift in Sources */,
 				40C010E82029725400E113D8 /* TwoWayFlightViewCell.swift in Sources */,
+				4000C1D4202F425E0075BD1B /* AppConstants.swift in Sources */,
 				4095E3CE2025E0F10088A80F /* ProfileViewController.swift in Sources */,
 				40ADAB692025FC7F000DD816 /* TextFieldEffects.swift in Sources */,
 				4095E3CB2025BC760088A80F /* SideBar.swift in Sources */,
