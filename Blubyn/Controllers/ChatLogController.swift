@@ -66,6 +66,10 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
         setupInputComponents()
         sideBarSetup()
         
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+        self.navigationController?.navigationBar.barTintColor = UIColor(named: "appThemeColor")
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        
         collectionView?.contentInset = UIEdgeInsets(top: 8.0, left: 0, bottom: 52.0, right: 0)
         collectionView?.backgroundColor = UIColor.chatbackgroundColor
         

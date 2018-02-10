@@ -58,7 +58,8 @@ class LoginViewController: UIViewController {
             // User is sign in
             let chatStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let chatViewController = chatStoryboard.instantiateViewController(withIdentifier: "chatvc")
-            self.present(chatViewController, animated: true, completion: nil)
+            let navigationController = UINavigationController(rootViewController: chatViewController)
+            self.present(navigationController, animated: true, completion: nil)
         })
     }
     
