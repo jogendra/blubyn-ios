@@ -40,12 +40,12 @@ class LoginViewController: UIViewController {
                 return
             } else {
                 self.fetchUserProfileData()
+                self.firebaseSignIn()
             }
         })
     }
     
-    // Fetch User's Public Facebook Profile Data
-    fileprivate func fetchUserProfileData() {
+    fileprivate func firebaseSignIn() {
         
         let credential = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
         
@@ -55,8 +55,14 @@ class LoginViewController: UIViewController {
                 return
             }
             // User is sign in
-            
+            let chatStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let chatViewController = profileStoryboard.instantiateViewController(withIdentifier: "chatvc")
+            self.present(chatViewController, animated: true, completion: nil)
         })
+    }
+    
+    // Fetch User's Public Facebook Profile Data
+    fileprivate func fetchUserProfileData() {
         
         let params = ["fields": "id, email, first_name, last_name, picture"]
         FBSDKGraphRequest(graphPath: "me", parameters: params).start(completionHandler: { connection, result, error in
