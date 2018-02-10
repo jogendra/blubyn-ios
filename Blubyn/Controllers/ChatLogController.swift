@@ -287,7 +287,7 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
     
     fileprivate func sideBarSetup() {
         
-        sideBar = SideBar(sourceView: self.view, menuItems: ["Chat", "Hot Deals", "My Trips", "Experiences", "Settings", "Profile"])
+        sideBar = SideBar(sourceView: self.view, menuItems: ["My Trips", "Experiences (Coming Soon)", "Share With Friends", "Help and Feedback", "Settings", "Profile", "Like us on Facebook", "Rate us on App Store", "Logout"])
         sideBar.delegate = self
     }
     

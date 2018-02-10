@@ -17,7 +17,7 @@ class SideBarTableViewController: UITableViewController {
     var delegate:SideBarTableViewControllerDelegate?
     var tableData:Array<String> = []
     
-    let icons = ["chat-icon","deals-icon","mytrip-icon","eye-icon","settings-icon","profile-icon",]
+    let icons = ["mytrip-icon","eye-icon","share-icon","help-and-feedback","settings-icon","profile-icon","like-us-on-facebook","rate-us","logout-icon"]
     
     // MARK: - Table view data source
     
