@@ -11,5 +11,6 @@ pod 'FacebookLogin'
 pod 'FacebookShare'
 pod 'Alamofire'
 pod 'AlamofireImage'
+pod 'Firebase/Core'
 
 end
