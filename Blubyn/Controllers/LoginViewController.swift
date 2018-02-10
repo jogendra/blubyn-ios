@@ -8,6 +8,7 @@
 
 import UIKit
 import FBSDKLoginKit
+import Firebase
 
 fileprivate enum DefaultValues {
     static let buttonCornerRadiusConstant: CGFloat = 4.0
@@ -45,7 +46,19 @@ class LoginViewController: UIViewController {
     
     // Fetch User's Public Facebook Profile Data
     fileprivate func fetchUserProfileData() {
-        let params = ["fields": "email, first_name, last_name, picture"]
+        
+        let credential = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
+        
+        Auth.auth().signIn(with: credential, completion: { (user, error) in
+            if let error = error {
+                print(error)
+                return
+            }
+            // User is sign in
+            
+        })
+        
+        let params = ["fields": "id, email, first_name, last_name, picture"]
         FBSDKGraphRequest(graphPath: "me", parameters: params).start(completionHandler: { connection, result, error in
             print(result.debugDescription)
         })
