@@ -60,10 +60,10 @@ class LoginViewController: UIViewController {
                 return
             }
             // User is sign in
+            BlubynUserDefaultsService.set(login: true)
             let chatStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let chatViewController = chatStoryboard.instantiateViewController(withIdentifier: "chatvc")
-            let navigationController = UINavigationController(rootViewController: chatViewController)
-            self.present(navigationController, animated: true, completion: {
+            let chatViewController = chatStoryboard.instantiateViewController(withIdentifier: "ChatNavVC")
+            self.present(chatViewController, animated: true, completion: {
                 BlubynViews.networkActivityIndicator(visible: false, showActivityIndicator: false)
                 ActivityIndicator.shared.hideProgressView()
             })
