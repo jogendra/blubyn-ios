@@ -47,7 +47,7 @@ class ProfileViewController: UIViewController {
         initialUISetups()
         textFieldsEditingMode(isEditable: false)
         editButtonInitialUISetup()
-        
+        fetchUserFacebookProfileData()
         self.navigationItem.title  = "Edit Profile"
     }
     
@@ -56,6 +56,15 @@ class ProfileViewController: UIViewController {
         editProfileButton.layer.borderWidth = 0.5
         editProfileButton.layer.borderColor = UIColor.black.withAlphaComponent(0.4).cgColor
         editProfileButton.layer.cornerRadius = 0.5 * editProfileButton.frame.width
+    }
+    
+    // MARK: - Fetch Facebook Profile Data
+    
+    fileprivate func fetchUserFacebookProfileData() {
+        
+        BlubynCommons.fetchUserProfileData(completion: { (connection, result, error) in
+            print(result)
+        })
     }
     
     fileprivate func textFieldsEditingMode(isEditable: Bool) {

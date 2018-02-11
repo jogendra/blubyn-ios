@@ -341,6 +341,7 @@ extension ChatLogController: SideBarDelegate {
     func logoutAndGoToLogin() {
         ActivityIndicator.shared.showProgressView()
         BlubynUserDefaultsService.set(login: false)
+        BlubynCommons.firebaseSignOut()
         let loginStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let loginViewController = loginStoryboard.instantiateViewController(withIdentifier: "LoginVC")
         self.present(loginViewController, animated: true, completion: {
