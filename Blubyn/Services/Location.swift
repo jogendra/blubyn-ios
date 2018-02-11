@@ -32,23 +32,25 @@ class Location: NSObject {
 
   // Show the popup to the user if we have been deined access
   func showLocationDisabledPopUp() {
+    
     let alertController = UIAlertController(title: "Location Access Disabled",
-                                            message: "For a reliable bike ride, GO needs location prermissions to improve pickups, navigation and support",
+                                            message: "Blubyn needs location prermissions to improve flight and hotel results, navigation and support",
                                             preferredStyle: .alert)
-
+    
     let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
     cancelAction.setValue(UIColor.appThemeColor, forKey: "titleTextColor")
     alertController.addAction(cancelAction)
-
+    
     let openAction = UIAlertAction(title: "Open Settings", style: .default) { (action) in
-      if let url = URL(string: UIApplicationOpenSettingsURLString) {
-        UIApplication.shared.open(url, options: [:], completionHandler: nil)
-      }
+        if let url = URL(string: UIApplicationOpenSettingsURLString) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
     }
     openAction.setValue(UIColor.appThemeColor, forKey: "titleTextColor")
     alertController.addAction(openAction)
-    // TODO: Present Alert
-  }
+    
+    UIApplication.topViewController()?.present(alertController, animated: true, completion: nil)
+    }
 }
 
 extension Location: CLLocationManagerDelegate {

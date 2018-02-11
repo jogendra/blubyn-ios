@@ -11,6 +11,7 @@ import FBSDKLoginKit
 import FirebaseAuth
 
 fileprivate enum DefaultValues {
+    
     static let buttonCornerRadiusConstant: CGFloat = 4.0
 }
 
@@ -28,6 +29,7 @@ class LoginViewController: UIViewController {
     fileprivate func initialUISetups() {
         
         facebookLoginButton.layer.cornerRadius = DefaultValues.buttonCornerRadiusConstant
+        logoImageView.addPulseAnimation(from: 0.4, to: 1.0, duration: 0.8, key: "opacity")
     }
 
     @IBAction func didTapFbLoginButton(_ sender: Any) {
@@ -40,13 +42,15 @@ class LoginViewController: UIViewController {
             } else if (loginResult?.isCancelled)! {
                 return
             } else {
-                self.fetchUserProfileData()
                 self.firebaseSignIn()
             }
         })
     }
     
     fileprivate func firebaseSignIn() {
+        
+        BlubynViews.networkActivityIndicator(visible: true, showActivityIndicator: true)
+        ActivityIndicator.shared.showProgressView(text: "Loading..", view: view)
         
         let credential = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
         
@@ -59,7 +63,10 @@ class LoginViewController: UIViewController {
             let chatStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let chatViewController = chatStoryboard.instantiateViewController(withIdentifier: "chatvc")
             let navigationController = UINavigationController(rootViewController: chatViewController)
-            self.present(navigationController, animated: true, completion: nil)
+            self.present(navigationController, animated: true, completion: {
+                BlubynViews.networkActivityIndicator(visible: false, showActivityIndicator: false)
+                ActivityIndicator.shared.hideProgressView()
+            })
         })
     }
     
