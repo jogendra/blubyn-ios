@@ -70,14 +70,5 @@ class LoginViewController: UIViewController {
         })
     }
     
-    // Fetch User's Public Facebook Profile Data
-    fileprivate func fetchUserProfileData() {
-        
-        let params = ["fields": "id, email, first_name, last_name, picture"]
-        FBSDKGraphRequest(graphPath: "me", parameters: params).start(completionHandler: { connection, result, error in
-            print(result.debugDescription)
-        })
-    }
-    
 }
 
