@@ -85,8 +85,8 @@ public class ActivityIndicator {
   public func addToVIew(uiView: UIView) {
     containerView.frame = uiView.frame
     containerView.center = uiView.center
-    containerView.backgroundColor = UIColorFromHex(rgbValue: 0xffffff, alpha: 0.0)
-    progressView.backgroundColor = UIColorFromHex(rgbValue: 0x444444, alpha: 0.0)
+    containerView.backgroundColor = UIColor.black.withAlphaComponent(0.6)
+    progressView.backgroundColor = UIColor.black.withAlphaComponent(0.6)
     progressView.clipsToBounds = true
     progressView.layer.cornerRadius = 10
     activityIndicator.frame = uiView.frame
