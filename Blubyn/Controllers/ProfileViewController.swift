@@ -64,6 +64,23 @@ class ProfileViewController: UIViewController {
         
         BlubynCommons.fetchUserProfileData(completion: { (connection, result, error) in
             print(result)
+            let parsedJSON = JSON(result)
+            
+            let firstName = parsedJSON["first_name"].string
+            let lastName = parsedJSON["last_name"].string
+            let userEmail = parsedJSON["email"].string
+            
+            self.firstNameTextField.text = firstName ?? ""
+            self.lastNameTextField.text = lastName ?? ""
+            self.emailTextField.text = userEmail ?? ""
+            
+            guard let userFirstName = firstName else {
+                return
+            }
+            self.userNameLabel.text = userFirstName
+            if let userLastName = lastName {
+                self.userNameLabel.text = userFirstName + " " + userLastName
+            }
         })
     }
     
