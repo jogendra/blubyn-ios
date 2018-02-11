@@ -21,7 +21,7 @@ class Network {
     Alamofire.SessionManager.default.session.configuration.timeoutIntervalForRequest = Defaults.timeoutInternval
     Alamofire.SessionManager.default.session.configuration.timeoutIntervalForResource = Defaults.timeoutInternval
 
-    WheelstreetViews.networkActivityIndicator(visible: true)
+    BlubynViews.networkActivityIndicator(visible: true)
 
     var finalParams: Dictionary<String, Any> = Network.defaultParamas()
     if let params = params {
@@ -30,7 +30,7 @@ class Network {
 
     Alamofire.request(url, method : .get, parameters: finalParams, headers: withHeader ? headers : nil)
       .responseJSON { response in
-        WheelstreetViews.networkActivityIndicator(visible: false)
+        BlubynViews.networkActivityIndicator(visible: false)
 
         switch response.result {
         case .success:
@@ -52,7 +52,7 @@ class Network {
 
     let headers: HTTPHeaders = getAuthorizationHeader()
 
-    WheelstreetViews.networkActivityIndicator(visible: true, showActivityIndicator: showActivityIndicator)
+    BlubynViews.networkActivityIndicator(visible: true, showActivityIndicator: showActivityIndicator)
 
     Alamofire.SessionManager.default.session.configuration.timeoutIntervalForRequest = Defaults.timeoutInternval
     Alamofire.SessionManager.default.session.configuration.timeoutIntervalForResource = Defaults.timeoutInternval
@@ -65,7 +65,7 @@ class Network {
 
     Alamofire.request(url as URLConvertible, method: .post, parameters: finalParams, encoding: encoding ?? JSONEncoding.default, headers: withHeader ? headers : nil).validate(statusCode: 200..<500).responseJSON { response in
 
-        WheelstreetViews.networkActivityIndicator(visible: false)
+        BlubynViews.networkActivityIndicator(visible: false)
 
         switch response.result {
         case .success:
@@ -86,7 +86,7 @@ class Network {
 
     let headers: HTTPHeaders = getAuthorizationHeader()
 
-    WheelstreetViews.networkActivityIndicator(visible: true)
+    BlubynViews.networkActivityIndicator(visible: true)
 
     Alamofire.SessionManager.default.session.configuration.timeoutIntervalForRequest = Defaults.timeoutInternval
     Alamofire.SessionManager.default.session.configuration.timeoutIntervalForResource = Defaults.timeoutInternval
@@ -114,7 +114,7 @@ class Network {
                         })
 
                         upload.responseJSON { response in
-                          WheelstreetViews.networkActivityIndicator(visible: false)
+                          BlubynViews.networkActivityIndicator(visible: false)
 
 
                           switch response.result {
@@ -143,7 +143,7 @@ class Network {
     Alamofire.SessionManager.default.session.configuration.timeoutIntervalForRequest = Defaults.timeoutInternval
     Alamofire.SessionManager.default.session.configuration.timeoutIntervalForResource = Defaults.timeoutInternval
 
-    WheelstreetViews.networkActivityIndicator(visible: true)
+    BlubynViews.networkActivityIndicator(visible: true)
 
     var finalParams: Dictionary<String, Any> = Network.defaultParamas()
     if let params = params {
@@ -153,7 +153,7 @@ class Network {
     Alamofire.request(url as URLConvertible, method: .put, parameters: finalParams, encoding: JSONEncoding.default, headers: withHeader ? headers : nil).validate()
       .responseJSON { response in
 
-        WheelstreetViews.networkActivityIndicator(visible: false)
+        BlubynViews.networkActivityIndicator(visible: false)
         switch response.result {
         case .success:
           if let value = response.result.value, let satusCode = response.response?.statusCode {
@@ -176,7 +176,7 @@ class Network {
     Alamofire.SessionManager.default.session.configuration.timeoutIntervalForRequest = Defaults.timeoutInternval
     Alamofire.SessionManager.default.session.configuration.timeoutIntervalForResource = Defaults.timeoutInternval
 
-    WheelstreetViews.networkActivityIndicator(visible: true)
+    BlubynViews.networkActivityIndicator(visible: true)
 
     var finalParams: Dictionary<String, Any> = Network.defaultParamas()
     if let params = params {
@@ -186,7 +186,7 @@ class Network {
     Alamofire.request(url as URLConvertible, method: .patch, parameters: finalParams, encoding: JSONEncoding.default, headers: withHeader ? headers : nil).validate()
       .responseJSON { response in
 
-        WheelstreetViews.networkActivityIndicator(visible: false)
+        BlubynViews.networkActivityIndicator(visible: false)
 
         switch response.result {
         case .success:
@@ -210,7 +210,7 @@ class Network {
     Alamofire.SessionManager.default.session.configuration.timeoutIntervalForRequest = Defaults.timeoutInternval
     Alamofire.SessionManager.default.session.configuration.timeoutIntervalForResource = Defaults.timeoutInternval
 
-    WheelstreetViews.networkActivityIndicator(visible: true)
+    BlubynViews.networkActivityIndicator(visible: true)
 
     var finalParams: Dictionary<String, Any> = Network.defaultParamas()
     if let params = params {
@@ -219,7 +219,7 @@ class Network {
 
     Alamofire.request(url as URLConvertible, method: .delete, parameters: finalParams, encoding: JSONEncoding.default, headers: withHeader ? headers : nil).validate()
       .responseJSON { response in
-        WheelstreetViews.networkActivityIndicator(visible: false)
+        BlubynViews.networkActivityIndicator(visible: false)
 
         switch response.result {
         case .success:
@@ -249,7 +249,7 @@ class Network {
       return
     }
 
-    WheelstreetViews.networkActivityIndicator(visible: true)
+    BlubynViews.networkActivityIndicator(visible: true)
 
     let imageData: Data =  UIImageJPEGRepresentation(image, 0.2)!
 
@@ -280,7 +280,7 @@ class Network {
             })
 
             upload.responseJSON { response in
-              WheelstreetViews.networkActivityIndicator(visible: false)
+              BlubynViews.networkActivityIndicator(visible: false)
 
               let code = response.response?.statusCode
 
@@ -313,7 +313,7 @@ class Network {
       return
     }
 
-    WheelstreetViews.networkActivityIndicator(visible: true)
+    BlubynViews.networkActivityIndicator(visible: true)
 
     let imageData: Data =  UIImageJPEGRepresentation(image, 0.2)!
 
@@ -341,7 +341,7 @@ class Network {
 
                         upload.responseJSON { response in
                           let code = response.response?.statusCode
-                          WheelstreetViews.networkActivityIndicator(visible: false)
+                          BlubynViews.networkActivityIndicator(visible: false)
 
                           switch response.result {
                           case .success(let value):
@@ -372,7 +372,7 @@ class Network {
       return
     }
 
-    WheelstreetViews.networkActivityIndicator(visible: true)
+    BlubynViews.networkActivityIndicator(visible: true)
 
     var imageData: [String: Data] = [:]
     for (name, image) in images {
@@ -408,7 +408,7 @@ class Network {
                         })
 
                         upload.responseJSON { response in
-                          WheelstreetViews.networkActivityIndicator(visible: false)
+                          BlubynViews.networkActivityIndicator(visible: false)
 
                           let code = response.response?.statusCode
 
@@ -441,11 +441,11 @@ class Network {
     Alamofire.SessionManager.default.session.configuration.timeoutIntervalForRequest = Defaults.timeoutInternval
     Alamofire.SessionManager.default.session.configuration.timeoutIntervalForResource = Defaults.timeoutInternval
 
-    WheelstreetViews.networkActivityIndicator(visible: true)
+    BlubynViews.networkActivityIndicator(visible: true)
 
     Alamofire.request( url, method : .get, headers: withHeader ? headers : nil ).responseImage { (response) in
 
-      WheelstreetViews.networkActivityIndicator(visible: false)
+      BlubynViews.networkActivityIndicator(visible: false)
 
       let code = response.response?.statusCode
 
@@ -463,22 +463,13 @@ class Network {
   }
 
   func getAuthorizationHeader() -> Dictionary<String,String> {
-    let token = Utils().checkNSUserDefault(GoKeys.accessToken)
-    let header: Dictionary<String,String> = ["Content-Type": "application/json", "Authorization" : "Bearer  \(token)"]
+    let header: Dictionary<String,String> = ["Content-Type": "application/json"]
     return header
   }
 
   static func defaultParamas() -> Dictionary<String,Any> {
-    var sourceParam: Dictionary<String,Any> = ["source": 3]
-    Location.shared.locationManagerSetup()
-
-    sourceParam["lat"] = UserDefaults.standard.value(forKey: GoKeys.currentLat)
-    sourceParam["lng"] = UserDefaults.standard.value(forKey: GoKeys.currentLng)
-
-////  Hardcoded for fake location outside parking area
-//    sourceParam["lat"] = 13.19864
-//    sourceParam["lng"] = 77.7044041
-
+    
+    let sourceParam: Dictionary<String,Any> = [:]
     return sourceParam
   }
 }

@@ -9,7 +9,8 @@
 import UIKit
 import AVFoundation
 
-class WheelstreetViews {
+class BlubynViews {
+    
   static func alertView(title: String, message: String) {
       let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
       let okAction = UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.cancel, handler: nil)
@@ -19,23 +20,24 @@ class WheelstreetViews {
   }
 
   static func bluredAlertView(title: String, message: String, action: UIAlertAction? = nil) {
-//        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.light)
-//        let visualEffectView = UIVisualEffectView(effect: blurEffect)
+    
+        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.light)
+        let visualEffectView = UIVisualEffectView(effect: blurEffect)
         guard let topViewController = UIApplication.topViewController() else {
            return
         }
-//      visualEffectView.frame = topViewController.view.frame
+      visualEffectView.frame = topViewController.view.frame
       let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
       let OKAction = UIAlertAction(title: "Dismiss", style: .default, handler: { action in
-//            visualEffectView.removeFromSuperview()
+            visualEffectView.removeFromSuperview()
       })
       alertController.addAction(OKAction)
 
     if let action = action {
       alertController.addAction(action)
     }
-//    topViewController.view.addSubview(visualEffectView)
-    topViewController.present(alertController, animated: true, completion: nil)
+    topViewController.view.addSubview(visualEffectView)
+    // topViewController.present(alertController, animated: true, completion: nil)
     }
 
 
@@ -74,7 +76,7 @@ class WheelstreetViews {
       }
     }
 
-     WheelstreetViews.bluredAlertView(title: "No Internet Connection", message: "Please connect to Internet", action: openAction)
+     BlubynViews.bluredAlertView(title: "No Internet Connection", message: "Please connect to Internet", action: openAction)
 
     ActivityIndicator.shared.hideProgressView()
   }
@@ -89,7 +91,7 @@ class WheelstreetViews {
     } else {
       AVCaptureDevice.requestAccess(for: .video, completionHandler: { (granted: Bool) in
         if !granted {
-            WheelstreetViews.showCamerDisabledPopUp()
+            BlubynViews.showCamerDisabledPopUp()
         }
       })
 
@@ -129,17 +131,6 @@ class WheelstreetViews {
     }
   }
 
-  static func statusBarToDefault() {
-    let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
-    UIApplication.shared.statusBarStyle = .default
-    appDelegate.statusBar?.backgroundColor = UIColor.clear
-  }
-
-  static func statusBarTo(color: UIColor, style: UIStatusBarStyle) {
-    let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
-    UIApplication.shared.statusBarStyle = style
-    appDelegate.statusBar?.backgroundColor = color
-  }
 
   static func makeToast(message: String, cancelHandler: (()->())? = { }) {
     if let topViewController = UIApplication.topViewController() {
