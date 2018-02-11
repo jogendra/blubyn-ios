@@ -17,10 +17,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Facebook config
+        
+        // Facebook SDK Config
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
-        // Firebase configure
+        // Firebase SDK Configure
         FirebaseApp.configure()
+        
+        // Set user CoreLocation
+        Location.shared.locationManagerSetup()
+        
         return true
     }
     
