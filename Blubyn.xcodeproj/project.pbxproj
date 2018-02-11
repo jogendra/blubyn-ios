@@ -12,6 +12,7 @@
 		4000C1D4202F425E0075BD1B /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4000C1D3202F425E0075BD1B /* AppConstants.swift */; };
 		4000C1D720300D630075BD1B /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4000C1D520300D630075BD1B /* Network.swift */; };
 		4000C1D820300D630075BD1B /* BlubynViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4000C1D620300D630075BD1B /* BlubynViews.swift */; };
+		4000C1DA203053A30075BD1B /* BlubynUserDefaultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4000C1D9203053A30075BD1B /* BlubynUserDefaultsService.swift */; };
 		401724B920233A81008F24BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401724B820233A81008F24BD /* AppDelegate.swift */; };
 		401724BB20233A81008F24BD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401724BA20233A81008F24BD /* LoginViewController.swift */; };
 		401724BE20233A81008F24BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 401724BC20233A81008F24BD /* Main.storyboard */; };
@@ -47,6 +48,7 @@
 		4000C1D3202F425E0075BD1B /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		4000C1D520300D630075BD1B /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		4000C1D620300D630075BD1B /* BlubynViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlubynViews.swift; sourceTree = "<group>"; };
+		4000C1D9203053A30075BD1B /* BlubynUserDefaultsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlubynUserDefaultsService.swift; sourceTree = "<group>"; };
 		400120612023855E0088B283 /* Blubyn.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Blubyn.entitlements; sourceTree = "<group>"; };
 		401724B520233A81008F24BD /* Blubyn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blubyn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		401724B820233A81008F24BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 				40ADAB7D2027861D000DD816 /* SwiftyJSON.swift */,
 				40ADAB7C2027861C000DD816 /* UIView+Reusable.swift */,
 				4000C1D3202F425E0075BD1B /* AppConstants.swift */,
+				4000C1D9203053A30075BD1B /* BlubynUserDefaultsService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -400,6 +403,7 @@
 				4039760620249409000A3AF2 /* ChatLogController.swift in Sources */,
 				40ADAB8A20279391000DD816 /* ChatMessagesCell.swift in Sources */,
 				40ADAB76202785AA000DD816 /* DeviceSizes.swift in Sources */,
+				4000C1DA203053A30075BD1B /* BlubynUserDefaultsService.swift in Sources */,
 				40ADAB72202785AA000DD816 /* ActivityIndicator.swift in Sources */,
 				40ADAB852027861D000DD816 /* Location.swift in Sources */,
 				40ADAB77202785AA000DD816 /* Extensions.swift in Sources */,

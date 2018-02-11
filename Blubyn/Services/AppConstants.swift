@@ -27,6 +27,7 @@ struct BlubynImages {
 
 struct BlubynKeys {
     
+    static let isUserLoggedIn: String = "isUserLoggedIn"
 }
 
 // MARK: - Endpoints

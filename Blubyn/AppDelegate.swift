@@ -26,7 +26,51 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Set user CoreLocation
         Location.shared.locationManagerSetup()
         
+        // Set Root
+        checkAuthAndSetInitialViewController()
+        
         return true
+    }
+    
+    func checkAuthAndSetInitialViewController() {
+        guard let isLoggedIn: Bool = UserDefaults.standard.value(forKey: BlubynKeys.isUserLoggedIn) as? Bool else {
+            BlubynUserDefaultsService.set(login: false)
+            setLoginAsRoot()
+            return
+        }
+        
+        switch isLoggedIn {
+        case true:
+            goToChatScreen()
+            return
+        case false:
+            setLoginAsRoot()
+            break
+        }
+    }
+    
+    func setLoginAsRoot() {
+        
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let initialViewController = storyboard.instantiateViewController(withIdentifier: "LoginVC")
+        
+        self.window?.rootViewController = initialViewController
+        self.window?.makeKeyAndVisible()
+    }
+    
+    func goToChatScreen() {
+        
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let initialViewController = storyboard.instantiateViewController(withIdentifier: "ChatNavVC")
+        
+        self.window?.rootViewController = initialViewController
+        self.window?.makeKeyAndVisible()
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {

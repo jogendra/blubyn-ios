@@ -327,9 +327,25 @@ extension ChatLogController: SideBarDelegate {
             let profileStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let profileViewController = profileStoryboard.instantiateViewController(withIdentifier: "profilevc")
             self.navigationController?.pushViewController(profileViewController, animated: true)
+        case 6:
+            break
+        case 7:
+            break
+        case 8:
+            logoutAndGoToLogin()
         default:
             break
         }
+    }
+    
+    func logoutAndGoToLogin() {
+        ActivityIndicator.shared.showProgressView()
+        BlubynUserDefaultsService.set(login: false)
+        let loginStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let loginViewController = loginStoryboard.instantiateViewController(withIdentifier: "LoginVC")
+        self.present(loginViewController, animated: true, completion: {
+            ActivityIndicator.shared.hideProgressView()
+        })
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
