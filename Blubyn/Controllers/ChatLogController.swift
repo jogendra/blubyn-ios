@@ -292,8 +292,14 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
     
     fileprivate func sendMessageToWebSocket(message: String) {
         
-        let payload: [String: Any] = ["chat_mode": "bot", "command": "send", "email": "rahulkash931@gmail.com", "lat": 28.6111274, "lng": 77.0544675, "message": message, "msg_type": "text"]
-        let params: [String: Any] = ["date": 1518263373401, "instance_id": "eALX5zLlN8E:APA91bHEMGkondcRVSKElUyjif3u7pFaLaNQHykp6j3zAYnwWVqzxL6owykwLWXHPO6_zB8OfaoEv4886OJFblUYey53EEUAoMSF9BkTPxvgiteJYnb78e2Pn-Zqd6Fmrc_vAv05IXm_", "last_message_id": 0, "last_message_time": 0,"payload": payload, "type": 0, "user_firebase_id": "18lPuMvsJGS6s9OeSRfKljpSxGE3"]
+        guard let firebaseID = BlubynCommons.getUserFirebaseID(), let email = BlubynCommons.getUserFirebaseEmail() else {
+            BlubynViews.somethingWentWrongAlertView()
+            return
+        }
+        
+        let payload: [String: Any] = ["chat_mode": "bot", "command": "send", "email": email, "lat": 28.6111274, "lng": 77.0544675, "message": message, "msg_type": "text"]
+        let params: [String: Any] = ["date": 1518263373401, "instance_id": "eALX5zLlN8E:APA91bHEMGkondcRVSKElUyjif3u7pFaLaNQHykp6j3zAYnwWVqzxL6owykwLWXHPO6_zB8OfaoEv4886OJFblUYey53EEUAoMSF9BkTPxvgiteJYnb78e2Pn-Zqd6Fmrc_vAv05IXm_", "last_message_id": 0, "last_message_time": 0,"payload": payload, "type": 0, "user_firebase_id": firebaseID]
+        
         BlubynAPI.sendMessage(params: params, completion: { parsedJSON, status, error in
             
             if parsedJSON != nil {
