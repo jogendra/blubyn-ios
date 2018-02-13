@@ -9,6 +9,7 @@
 import Foundation
 import Alamofire
 
+//Note: Change before deploying app to App Store
 fileprivate var testing: Bool = true
 
 public var apiURL = testing ? BlubynURLs.testingApiURL : BlubynURLs.productionApiURL
@@ -41,4 +42,7 @@ enum BlubynAPIStatus: Int {
 
 class BlubynAPI {
     
+    class func sendMessage(params: Dictionary<String, Any>, completion: @escaping(_ parsedJSON: JSON?, _ statusCode: Int?, _ error: Error?) -> Void) {
+        
+    }
 }
