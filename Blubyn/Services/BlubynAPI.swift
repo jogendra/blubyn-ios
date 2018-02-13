@@ -15,10 +15,28 @@ public var apiURL = testing ? BlubynURLs.testingApiURL : BlubynURLs.productionAp
 
 // MARK: - Endpoints
 
-enum BlubynEndpoints: String {
+fileprivate enum BlubynEndpoints: String {
     
     case api = "api/"
     case sendMessage = "sendmessage/"
+}
+
+// MARK: API status
+
+enum BlubynAPIStatus: Int {
+    case SUCCESS          =                 200
+    
+    case NO_CONTENT_FOUND  =                204
+    
+    case FALIURE            =               422
+    
+    case INTERNAL_SERVER_ERROR =            500
+    
+    case ERR_APP_HTTP_ERROR =               12000
+    
+    case ERR_APP_HTTP_RESPONSE =            12001
+    
+    case UNKOWN_ERROR         =             1000
 }
 
 class BlubynAPI {
