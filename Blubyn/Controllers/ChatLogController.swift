@@ -283,10 +283,23 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
 //            userMessages.append(enteredText)
             numberOfSections += 1
             newCellMessages.append(enteredText)
+            sendMessageToWebSocket(message: enteredText)
         }
         collectionView?.reloadData()
         collectionView?.numberOfItems(inSection: 0)
         inputTextField.text = nil
+    }
+    
+    fileprivate func sendMessageToWebSocket(message: String) {
+        
+        let payload: [String: Any] = ["chat_mode": "bot", "command": "send", "email": "imjog24@gmail.com", "lat": 28.6111274, "lng": 77.0544675, "message": message, "msg_type": "text"]
+        let params: [String: Any] = ["payload": payload]
+        BlubynAPI.sendMessage(params: params, completion: { parsedJSON, status, error in
+            
+            if parsedJSON != nil {
+                print(parsedJSON)
+            }
+        })
     }
     
     fileprivate func sideBarSetup() {
