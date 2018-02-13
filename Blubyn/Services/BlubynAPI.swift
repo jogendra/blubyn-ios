@@ -44,5 +44,21 @@ class BlubynAPI {
     
     class func sendMessage(params: Dictionary<String, Any>, completion: @escaping(_ parsedJSON: JSON?, _ statusCode: Int?, _ error: Error?) -> Void) {
         
+        guard Reachability.isConnectedToNetwork() == true else {
+            ActivityIndicator.shared.hideProgressView()
+            BlubynViews.noInternetConnectionAlertView()
+            return
+        }
+        
+        Network.shared.post(apiURL + BlubynEndpoints.api.rawValue + BlubynEndpoints.sendMessage.rawValue, params: params, withHeader: true, completion: { (parsedJSON, statusCode, error) in
+            
+            if error != nil {
+                completion(nil, statusCode, error)
+            } else {
+                completion(parsedJSON, statusCode, error)
+            }
+
+        })
+        
     }
 }
