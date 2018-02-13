@@ -23,4 +23,19 @@ public class BlubynCommons {
     class func firebaseSignOut() {
         try? Auth.auth().signOut()
     }
+    
+    class func getFirebaseUserData(completion: @escaping(_ userID: String?, _ userEmail: String?) -> Void) {
+        let firebaseUser = Auth.auth().currentUser
+        completion(firebaseUser?.uid, firebaseUser?.email)
+    }
+    
+    class func getUserFirebaseID() -> String? {
+        let firebaseUser = Auth.auth().currentUser
+        return firebaseUser?.uid
+    }
+    
+    class func getUserFirebaseEmail() -> String? {
+        let firebaseUser = Auth.auth().currentUser
+        return firebaseUser?.email
+    }
 }
