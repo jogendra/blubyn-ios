@@ -19,6 +19,7 @@
 		401724BE20233A81008F24BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 401724BC20233A81008F24BD /* Main.storyboard */; };
 		401724C020233A81008F24BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 401724BF20233A81008F24BD /* Assets.xcassets */; };
 		401724C320233A81008F24BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 401724C120233A81008F24BD /* LaunchScreen.storyboard */; };
+		4026933E2032EBA0003FAE1D /* BlubynAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4026933D2032EBA0003FAE1D /* BlubynAPI.swift */; };
 		4039760620249409000A3AF2 /* ChatLogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4039760520249409000A3AF2 /* ChatLogController.swift */; };
 		407749CE2028AA6000B4515A /* OneWayFlightViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407749CC2028AA6000B4515A /* OneWayFlightViewCell.swift */; };
 		407749CF2028AA6000B4515A /* OneWayFlightViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 407749CD2028AA6000B4515A /* OneWayFlightViewCell.xib */; };
@@ -59,6 +60,7 @@
 		401724BF20233A81008F24BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		401724C220233A81008F24BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		401724C420233A81008F24BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4026933D2032EBA0003FAE1D /* BlubynAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlubynAPI.swift; sourceTree = "<group>"; };
 		4039760520249409000A3AF2 /* ChatLogController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLogController.swift; sourceTree = "<group>"; };
 		407749CC2028AA6000B4515A /* OneWayFlightViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneWayFlightViewCell.swift; sourceTree = "<group>"; };
 		407749CD2028AA6000B4515A /* OneWayFlightViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OneWayFlightViewCell.xib; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 				4000C1D3202F425E0075BD1B /* AppConstants.swift */,
 				4000C1D9203053A30075BD1B /* BlubynUserDefaultsService.swift */,
 				4000C1DB20305C270075BD1B /* BlubynCommons.swift */,
+				4026933D2032EBA0003FAE1D /* BlubynAPI.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -410,6 +413,7 @@
 				4000C1DA203053A30075BD1B /* BlubynUserDefaultsService.swift in Sources */,
 				40ADAB72202785AA000DD816 /* ActivityIndicator.swift in Sources */,
 				40ADAB852027861D000DD816 /* Location.swift in Sources */,
+				4026933E2032EBA0003FAE1D /* BlubynAPI.swift in Sources */,
 				40ADAB77202785AA000DD816 /* Extensions.swift in Sources */,
 				40ADAB832027861D000DD816 /* UIView+Reusable.swift in Sources */,
 				401724BB20233A81008F24BD /* LoginViewController.swift in Sources */,

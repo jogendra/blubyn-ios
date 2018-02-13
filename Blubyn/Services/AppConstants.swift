@@ -30,13 +30,6 @@ struct BlubynKeys {
     static let isUserLoggedIn: String = "isUserLoggedIn"
 }
 
-// MARK: - Endpoints
-
-enum BlubynEndpoints: String {
-    
-    case api = "api/"
-    case sendMessage = "sendmessage/"
-}
 
 // MARK: - API URLs
 
