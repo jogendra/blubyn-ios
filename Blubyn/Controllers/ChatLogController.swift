@@ -357,7 +357,7 @@ extension ChatLogController: SideBarDelegate {
         }
     }
     
-    func logoutAndGoToLogin() {
+    fileprivate func logoutAndGoToLogin() {
         ActivityIndicator.shared.showProgressView()
         BlubynUserDefaultsService.set(login: false)
         BlubynCommons.firebaseSignOut()
