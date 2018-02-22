@@ -9,6 +9,7 @@
 import Foundation
 import FBSDKLoginKit
 import FirebaseAuth
+import FirebaseInstanceID
 
 public class BlubynCommons {
     
@@ -37,5 +38,9 @@ public class BlubynCommons {
     class func getUserFirebaseEmail() -> String? {
         let firebaseUser = Auth.auth().currentUser
         return firebaseUser?.email
+    }
+    
+    class func getInstanceID() -> String? {
+        return InstanceID.instanceID().token()
     }
 }
