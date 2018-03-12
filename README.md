@@ -10,6 +10,25 @@ This repository contains iOS version on Blubyn App.
 3. Open in Xcode:
 ```open Blubyn.xcworkspace```
 
+## Screenshots
+
+<table>
+  <tr>
+    <td><img src="Screenshots/1.png" height = "480" width="270"></td>
+    <td><img src="Screenshots/2.png" height = "480" width="270"></td>
+    <td><img src="Screenshots/3.png" height = "480" width="270"></td>
+  </tr>
+  <tr>
+    <td><img src="Screenshots/4.png" height = "480" width="270"></td>
+    <td><img src="Screenshots/5.png" height = "480" width="270"></td>
+    <td><img src="Screenshots/6.png" height = "480" width="270"></td>
+  </tr>
+  <tr>
+    <td><img src="Screenshots/7.png" height = "480" width="270"></td>
+    <td><img src="Screenshots/8.png" height = "480" width="270"></td>
+  </tr>
+</table>
+
 ### Coding standards
 
 Please follow the following guides and code standards:
