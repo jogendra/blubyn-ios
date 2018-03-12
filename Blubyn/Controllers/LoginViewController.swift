@@ -31,12 +31,6 @@ class LoginViewController: UIViewController {
         facebookLoginButton.layer.cornerRadius = DefaultValues.buttonCornerRadiusConstant
         logoImageView.addPulseAnimation(from: 0.4, to: 1.0, duration: 0.8, key: "opacity")
         logoImageView.layer.cornerRadius = 8.0
-        
-        logoImageView.layer.shadowOffset = .zero
-        logoImageView.layer.shadowColor = UIColor.black.withAlphaComponent(0.2).cgColor
-        logoImageView.layer.shadowRadius = 2.0
-        logoImageView.layer.shadowOpacity = 0.8
-        logoImageView.layer.shadowPath = UIBezierPath(rect: logoImageView.bounds).cgPath
     }
 
     @IBAction func didTapFbLoginButton(_ sender: Any) {
